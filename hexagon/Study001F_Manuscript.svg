@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+<style>
+svg{background:#fff}
+.wire{stroke:#fff;stroke-width:2.2;stroke-linejoin:round}
+.tower-a{fill:#5A8BFF;fill-opacity:.42}
+.tower-b{fill:#8E5AFF;fill-opacity:.42}
+.tower-c{fill:#42C97A;fill-opacity:.42}
+.tower-d{fill:#FFB14A;fill-opacity:.42}
+.facet{stroke:#fff;stroke-width:2.2}
+</style>
+<defs>
+<polygon id="hexagon" points="0,-40 34,-20 34,20 0,40 -34,20 -34,-20"/>
+<g id="tower-grammar">
+<use id="tower-base" href="#hexagon"/>
+<use id="tower-cap" href="#hexagon" transform="translate(0,-120) scale(1.08) rotate(4)"/>
+<polygon id="facet-edge-1" class="facet" points="-34,-20 0,-40 0,-160 -37,-143"/>
+<polygon id="facet-edge-2" class="facet" points="0,-40 34,-20 37,-143 0,-163"/>
+<polygon id="facet-edge-3" class="facet" points="34,-20 34,20 37,-103 37,-143"/>
+<polygon id="facet-edge-4" class="facet" points="34,20 0,40 0,-80 37,-103"/>
+<polygon id="facet-edge-5" class="facet" points="0,40 -34,20 -37,-103 0,-80"/>
+<polygon id="facet-edge-6" class="facet" points="-34,20 -34,-20 -37,-143 -37,-103"/>
+</g>
+</defs>
+<g id="shared-neighbourhood">
+<g id="tower-a" class="tower-a wire" transform="translate(310 585) rotate(-6)"><use href="#tower-grammar"/></g>
+<g id="tower-b" class="tower-b wire" transform="translate(455 505) rotate(2) scale(1.02)"><use href="#tower-grammar"/></g>
+<g id="tower-c" class="tower-c wire" transform="translate(585 575) rotate(5) scale(.99)"><use href="#tower-grammar"/></g>
+<g id="tower-d" class="tower-d wire" transform="translate(450 655) rotate(1) scale(.95)"><use href="#tower-grammar"/></g>
+</g>
+</svg>

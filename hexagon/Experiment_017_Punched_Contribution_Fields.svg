@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Hexagonal_Prism" width="385" height="315">
+  <ns0:defs>
+    <ns0:pattern id="checker" width="40" height="40" patternUnits="userSpaceOnUse">
+      <ns0:rect width="40" height="40" fill="#d7d7d7" />
+      <ns0:rect width="20" height="20" fill="#f4f4f4" />
+      <ns0:rect x="20" y="20" width="20" height="20" fill="#f4f4f4" />
+    </ns0:pattern>
+  </ns0:defs>
+  <ns0:rect width="100%" height="100%" fill="url(#checker)" />
+  <ns0:style>
+.field{stroke:none;mix-blend-mode:screen}
+.facet{
+  fill:none;
+  stroke:#111;
+  stroke-width:1;
+}
+</ns0:style>
+  <ns0:g id="bottom">
+    <ns0:polygon fill="#d8d8ff" opacity="0.1" points="-4.05,30.75 52.53,109.47 82.05,335.78 25.47,230.00" class="field" />
+    <ns0:polygon fill="#d8d8ff" opacity="0.13" points="-1.25,40.23 51.65,113.83 79.25,325.42 26.35,226.53" class="field" />
+    <ns0:polygon fill="#d8d8ff" opacity="0.16" points="1.20,48.52 50.88,117.64 76.80,316.36 27.12,223.48" class="field" />
+    <ns0:polygon fill="#d8d8ff" opacity="0.18" points="3.30,55.63 50.22,120.91 74.70,308.59 27.78,220.87" class="field" />
+    <ns0:polygon opacity="0.75" points="  4,  58   50, 122   74, 306   28, 220" class="facet" />
+  </ns0:g>
+  <ns0:g id="side-rear-left">
+    <ns0:polygon fill="#ff3ea5" opacity="0.1" points="23.44,100.61 286.65,100.61 298.95,331.85 52.95,326.93" class="field" />
+    <ns0:polygon fill="#ff3ea5" opacity="0.13" points="32.68,108.05 278.77,108.05 290.27,324.25 60.28,319.65" class="field" />
+    <ns0:polygon fill="#ff3ea5" opacity="0.16" points="40.76,114.56 271.88,114.56 282.68,317.60 66.68,313.28" class="field" />
+    <ns0:polygon fill="#ff3ea5" opacity="0.18" points="47.69,120.14 265.97,120.14 276.17,311.90 72.17,307.82" class="field" />
+    <ns0:polygon opacity="0.75" points=" 50, 122  264, 122  274, 310   74, 306" class="facet" />
+  </ns0:g>
+  <ns0:g id="side-rear">
+    <ns0:polygon fill="#38f3ff" opacity="0.1" points="250.31,109.35 390.53,23.25 390.53,234.81 262.62,340.59" class="field" />
+    <ns0:polygon fill="#38f3ff" opacity="0.13" points="255.07,113.75 386.18,33.25 386.18,231.05 266.57,329.95" class="field" />
+    <ns0:polygon fill="#38f3ff" opacity="0.16" points="259.24,117.60 382.36,42.00 382.36,227.76 270.04,320.64" class="field" />
+    <ns0:polygon fill="#38f3ff" opacity="0.18" points="262.81,120.90 379.09,49.50 379.09,224.94 273.01,312.66" class="field" />
+    <ns0:polygon opacity="0.75" points="264, 122  378,  52  378, 224  274, 310" class="facet" />
+  </ns0:g>
+  <ns0:g id="side-rear-right">
+    <ns0:polygon fill="#ff9800" opacity="0.1" points="-37.78,57.39 112.28,-6.57 316.46,-9.03 422.24,50.01 282.02,136.11 18.80,136.11" class="field" />
+    <ns0:polygon fill="#ff9800" opacity="0.13" points="-23.25,57.60 117.05,-2.20 307.95,-4.50 406.85,50.70 275.75,131.20 29.65,131.20" class="field" />
+    <ns0:polygon fill="#ff9800" opacity="0.16" points="-10.53,57.79 121.23,1.63 300.51,-0.53 393.39,51.31 270.27,126.91 39.15,126.91" class="field" />
+    <ns0:polygon fill="#ff9800" opacity="0.18" points="0.37,57.95 124.81,4.91 294.13,2.87 381.85,51.83 265.57,123.23 47.29,123.23" class="field" />
+    <ns0:polygon opacity="0.75" points="  4,  58  126,   6  292,   4  378,  52  264, 122   50, 122" class="facet" />
+  </ns0:g>
+  <ns0:g id="top">
+    <ns0:polygon fill="#4fa8ff" opacity="0.1" points="-12.33,46.04 137.73,-17.92 157.41,166.58 17.19,245.30" class="field" />
+    <ns0:polygon fill="#4fa8ff" opacity="0.13" points="-6.65,50.20 133.65,-9.60 152.05,162.90 20.95,236.50" class="field" />
+    <ns0:polygon fill="#4fa8ff" opacity="0.16" points="-1.68,53.84 130.08,-2.32 147.36,159.68 24.24,228.80" class="field" />
+    <ns0:polygon fill="#4fa8ff" opacity="0.18" points="2.58,56.96 127.02,3.92 143.34,156.92 27.06,222.20" class="field" />
+    <ns0:polygon opacity="0.75" points="  4,  58  126,   6  142, 156   28, 220" class="facet" />
+  </ns0:g>
+  <ns0:g id="side-front-left">
+    <ns0:polygon fill="#005cff" opacity="0.1" points="105.64,-11.14 309.82,-13.59 317.20,173.37 125.33,173.37" class="field" />
+    <ns0:polygon fill="#005cff" opacity="0.13" points="112.73,-5.17 303.62,-7.47 310.52,167.32 131.12,167.32" class="field" />
+    <ns0:polygon fill="#005cff" opacity="0.16" points="118.92,0.04 298.20,-2.12 304.68,162.04 136.20,162.04" class="field" />
+    <ns0:polygon fill="#005cff" opacity="0.18" points="124.23,4.51 293.55,2.47 299.67,157.51 140.55,157.51" class="field" />
+    <ns0:polygon opacity="0.75" points="126,   6  292,   4  298, 156  142, 156" class="facet" />
+  </ns0:g>
+  <ns0:g id="side-front">
+    <ns0:polygon fill="#00e5ff" opacity="0.1" points="281.76,-20.15 387.55,38.89 387.55,250.45 289.14,166.81" class="field" />
+    <ns0:polygon fill="#00e5ff" opacity="0.13" points="285.32,-11.75 384.23,43.45 384.23,241.25 292.23,163.05" class="field" />
+    <ns0:polygon fill="#00e5ff" opacity="0.16" points="288.44,-4.40 381.32,47.44 381.32,233.20 294.92,159.76" class="field" />
+    <ns0:polygon fill="#00e5ff" opacity="0.18" points="291.11,1.90 378.83,50.86 378.83,226.30 297.23,156.94" class="field" />
+    <ns0:polygon opacity="0.75" points="292,   4  378,  52  378, 224  298, 156" class="facet" />
+  </ns0:g>
+  <ns0:g id="side-front-right">
+    <ns0:polygon fill="#7a4dff" opacity="0.1" points="-11.33,218.01 128.89,139.29 320.77,139.29 419.17,222.93 291.25,328.71 45.25,323.79" class="field" />
+    <ns0:polygon fill="#7a4dff" opacity="0.13" points="2.35,218.70 133.45,145.10 312.85,145.10 404.85,223.30 285.25,322.20 55.25,317.60" class="field" />
+    <ns0:polygon fill="#7a4dff" opacity="0.16" points="14.32,219.31 137.44,150.19 305.92,150.19 392.32,223.63 280.00,316.51 64.00,312.19" class="field" />
+    <ns0:polygon fill="#7a4dff" opacity="0.18" points="24.58,219.83 140.86,154.55 299.98,154.55 381.58,223.91 275.50,311.63 71.50,307.55" class="field" />
+    <ns0:polygon opacity="0.75" points=" 28, 220  142, 156  298, 156  378, 224  274, 310   74, 306  " class="facet" />
+  </ns0:g>
+</ns0:svg>

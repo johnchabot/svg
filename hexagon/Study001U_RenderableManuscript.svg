@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2200">
+
+<style>
+svg{background:#fff;color:#000}
+.ground{fill:none;stroke:#bcbcbc;stroke-width:1.2;stroke-dasharray:8 6}
+.hex{fill:none;stroke:currentColor;stroke-width:2}
+.link{stroke:currentColor;stroke-width:1.1;opacity:.72}
+</style>
+
+<!--
+Study001U
+
+This is valid SVG.
+
+The manuscript is expressed using <defs>, <g>, <use> and meaningful ids.
+The geometry is still simplified, but the structure now mirrors the intended
+construction process without relying on custom XML elements.
+-->
+
+<defs>
+
+  <!-- Canonical projected base hexagon -->
+  <polygon id="canonical-base-hexagon"
+    points="
+      0,-54
+      44,-30
+      42,24
+      0,46
+      -42,24
+      -44,-30"/>
+
+  <!-- Canonical projected cap -->
+  <polygon id="canonical-cap-hexagon"
+    points="
+      0,-56
+      46,-31
+      44,25
+      0,48
+      -44,25
+      -46,-31"/>
+
+  <!-- Canonical tower -->
+  <g id="canonical-tower">
+
+    <use href="#canonical-base-hexagon"
+         class="hex"/>
+
+    <use href="#canonical-cap-hexagon"
+         class="hex"
+         transform="translate(0,-430) scale(1.04)"/>
+
+    <line class="link" x1="0" y1="-54" x2="0" y2="-488"/>
+    <line class="link" x1="44" y1="-30" x2="48" y2="-462"/>
+    <line class="link" x1="42" y1="24" x2="46" y2="-404"/>
+    <line class="link" x1="0" y1="46" x2="0" y2="-378"/>
+    <line class="link" x1="-42" y1="24" x2="-46" y2="-404"/>
+    <line class="link" x1="-44" y1="-30" x2="-48" y2="-462"/>
+
+  </g>
+
+</defs>
+
+<!-- Construction plane -->
+<polygon class="ground"
+ points="490,1160 910,1160 1080,1680 320,1680"/>
+
+<g id="remembered-neighbourhood">
+
+  <!-- NOTE:
+       The neighbourhood is intentionally still approximate.
+       Next study: equal perceived overlap after projection.
+  -->
+
+  <g id="tower-north"
+     transform="translate(700,1260)">
+    <use href="#canonical-tower"/>
+  </g>
+
+  <g id="tower-east"
+     transform="translate(775,1390)">
+    <use href="#canonical-tower"/>
+  </g>
+
+  <g id="tower-south"
+     transform="translate(700,1520)">
+    <use href="#canonical-tower"/>
+  </g>
+
+  <g id="tower-west"
+     transform="translate(625,1390)">
+    <use href="#canonical-tower"/>
+  </g>
+
+</g>
+
+</svg>

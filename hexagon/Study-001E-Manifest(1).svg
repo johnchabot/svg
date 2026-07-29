@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+<!--
+Study 001E — Manifest
+Relationships are authored.
+Perception emerges.
+The hexagon is the primitive.
+Study only. Honest, incomplete.
+-->
+
+<style>
+.bg{fill:#fff}
+.top{fill:#4D4D4D;stroke:#111;stroke-width:1.4}
+.left{fill:#2B2B2B;stroke:#111;stroke-width:1.4}
+.right{fill:#0A0A0A;stroke:#111;stroke-width:1.4}
+</style>
+<rect class="bg" width="600" height="600"/>
+<defs>
+  <polygon id="primitive" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+</defs>
+<g id="cluster">
+
+<g transform="translate(300,330) rotate(0)">
+  <polygon class="top" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="left" points="-40,10 0,30 0,-155 -40,-175"/>
+  <polygon class="right" points="0,30 40,10 40,-175 0,-155"/>
+  <line class="left" x1="-40" y1="-10" x2="-40" y2="-175"/>
+  <line class="right" x1="40" y1="-10" x2="40" y2="-175"/>
+</g>
+<g transform="translate(266,352) rotate(-4)">
+  <polygon class="top" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="left" points="-40,10 0,30 0,-125 -40,-145"/>
+  <polygon class="right" points="0,30 40,10 40,-145 0,-125"/>
+  <line class="left" x1="-40" y1="-10" x2="-40" y2="-145"/>
+  <line class="right" x1="40" y1="-10" x2="40" y2="-145"/>
+</g>
+<g transform="translate(336,346) rotate(3)">
+  <polygon class="top" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="left" points="-40,10 0,30 0,-135 -40,-155"/>
+  <polygon class="right" points="0,30 40,10 40,-155 0,-135"/>
+  <line class="left" x1="-40" y1="-10" x2="-40" y2="-155"/>
+  <line class="right" x1="40" y1="-10" x2="40" y2="-155"/>
+</g>
+<g transform="translate(302,370) rotate(1)">
+  <polygon class="top" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="left" points="-40,10 0,30 0,-102 -40,-122"/>
+  <polygon class="right" points="0,30 40,10 40,-122 0,-102"/>
+  <line class="left" x1="-40" y1="-10" x2="-40" y2="-122"/>
+  <line class="right" x1="40" y1="-10" x2="40" y2="-122"/>
+</g>
+</g>
+</svg>

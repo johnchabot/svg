@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2200">
+<style>
+svg{background:#fff;color:#000}
+.hex{fill:none;stroke:currentColor;stroke-width:2.2;vector-effect:non-scaling-stroke}
+.link{stroke:currentColor;stroke-width:1.2;opacity:.75;vector-effect:non-scaling-stroke}
+</style>
+
+<defs>
+  <polygon id="hexagon"
+    points="0,-56 48,-28 48,28 0,56 -48,28 -48,-28"/>
+  <!-- One canonical tower -->
+  <g id="canonical-tower">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex"
+         transform="translate(0,-430) scale(1.04)"/>
+    <line class="link" x1="-48" y1="-28" x2="-48" y2="-458"/>
+    <line class="link" x1="0" y1="-56" x2="0" y2="-486"/>
+    <line class="link" x1="48" y1="-28" x2="48" y2="-458"/>
+    <line class="link" x1="48" y1="28" x2="48" y2="-402"/>
+    <line class="link" x1="0" y1="56" x2="0" y2="-374"/>
+    <line class="link" x1="-48" y1="28" x2="-48" y2="-402"/>
+  </g>
+</defs>
+
+<!-- Study001O : instantiate one canonical tower -->
+<g id="remembered-neighbourhood" transform="translate(700,1320)">
+
+  <g id="tower-north"
+     transform="translate(0,-72) rotate(0)">
+    <use href="#canonical-tower"/>
+  </g>
+
+  <g id="tower-east"
+     transform="translate(72,0) rotate(90)">
+    <use href="#canonical-tower"/>
+  </g>
+
+  <g id="tower-south"
+     transform="translate(0,72) rotate(180)">
+    <use href="#canonical-tower"/>
+  </g>
+
+  <g id="tower-west"
+     transform="translate(-72,0) rotate(270)">
+    <use href="#canonical-tower"/>
+  </g>
+
+</g>
+</svg>

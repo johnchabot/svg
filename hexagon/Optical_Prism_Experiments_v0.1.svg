@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900" height="420" viewBox="0 0 900 420">
+
+  <style>
+    .title{
+      font: 600 18px sans-serif;
+      fill:#333;
+    }
+
+    .label{
+      font: 12px sans-serif;
+      fill:#555;
+    }
+
+    .edge{
+      stroke:#4a4a4a;
+      stroke-width:1.6;
+      fill:none;
+      stroke-linejoin:round;
+    }
+
+    .rearEdge{
+      stroke:#666;
+      stroke-width:1;
+      stroke-opacity:.30;
+      fill:none;
+    }
+
+    .facet{
+      fill-opacity:.62;
+      stroke:#4a4a4a;
+      stroke-width:1.2;
+    }
+
+    .micro{
+      opacity:.16;
+    }
+
+    .interfere{
+      opacity:.20;
+    }
+
+    .highlight{
+      opacity:.12;
+    }
+  </style>
+
+  <defs>
+
+    <!-- ---------- MATERIAL STREAM ---------- -->
+
+    <linearGradient id="frontShade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eeeeee"/>
+      <stop offset="55%" stop-color="#cfcfcf"/>
+      <stop offset="100%" stop-color="#a4a4a4"/>
+    </linearGradient>
+
+    <linearGradient id="rightShade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4d4d4"/>
+      <stop offset="100%" stop-color="#8f8f8f"/>
+    </linearGradient>
+
+    <radialGradient id="innerGlow">
+      <stop offset="0%" stop-color="#dff6ff" stop-opacity=".40"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grainA"
+             width="8" height="8"
+             patternUnits="userSpaceOnUse">
+      <path d="M0,8 L8,0"
+            stroke="#000"
+            stroke-width=".5"/>
+    </pattern>
+
+    <!-- ---------- EMERGENT STREAM ---------- -->
+
+    <pattern id="latticeA"
+             width="10" height="10"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(24)">
+      <line x1="0" y1="0" x2="0" y2="10"
+            stroke="#000"
+            stroke-width=".45"/>
+    </pattern>
+
+    <pattern id="latticeB"
+             width="10" height="10"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(27)">
+      <line x1="0" y1="0" x2="0" y2="10"
+            stroke="#000"
+            stroke-width=".45"/>
+    </pattern>
+
+  </defs>
+
+  <text x="140" y="35" class="title">Experiment A — Material Optics</text>
+  <text x="575" y="35" class="title">Experiment B — Emergent Optics</text>
+
+  <!-- ===================================================== -->
+  <!-- MATERIAL STREAM -->
+  <!-- ===================================================== -->
+
+  <!-- rear prism -->
+  <g transform="translate(70,40)">
+    <polygon class="rearEdge"
+      points="110,70 180,70 215,95 180,120 110,120 75,95"/>
+    <polygon class="rearEdge"
+      points="110,120 180,120 180,205 110,205"/>
+    <polygon class="rearEdge"
+      points="180,120 215,95 215,180 180,205"/>
+  </g>
+
+  <!-- front prism -->
+  <g transform="translate(40,20)">
+
+    <!-- top -->
+    <polygon class="facet"
+      fill="#ececec"
+      points="110,70 180,70 215,95 180,120 110,120 75,95"/>
+
+    <!-- front -->
+    <polygon id="matFront"
+      class="facet"
+      fill="url(#frontShade)"
+      points="110,120 180,120 180,205 110,205"/>
+
+    <!-- right -->
+    <polygon class="facet"
+      fill="url(#rightShade)"
+      points="180,120 215,95 215,180 180,205"/>
+
+    <!-- optical field -->
+    <polygon
+      fill="url(#innerGlow)"
+      points="110,120 180,120 180,205 110,205"/>
+
+    <!-- micro field -->
+    <polygon
+      class="micro"
+      fill="url(#grainA)"
+      points="110,120 180,120 180,205 110,205"/>
+
+    <!-- edge highlight -->
+    <line class="highlight"
+      x1="110" y1="120"
+      x2="180" y2="120"
+      stroke="white"
+      stroke-width="2"/>
+
+  </g>
+
+  <text x="40" y="360" class="label">
+    Grayscale-first. Transparent facets. Rear prism remains perceptible.
+  </text>
+
+  <!-- ===================================================== -->
+  <!-- EMERGENT STREAM -->
+  <!-- ===================================================== -->
+
+  <!-- rear prism -->
+  <g transform="translate(500,40)">
+    <polygon class="rearEdge"
+      points="110,70 180,70 215,95 180,120 110,120 75,95"/>
+    <polygon class="rearEdge"
+      points="110,120 180,120 180,205 110,205"/>
+    <polygon class="rearEdge"
+      points="180,120 215,95 215,180 180,205"/>
+  </g>
+
+  <!-- front prism -->
+  <g transform="translate(470,20)">
+
+    <polygon class="facet"
+      fill="#ececec"
+      points="110,70 180,70 215,95 180,120 110,120 75,95"/>
+
+    <polygon
+      class="facet"
+      fill="#cfcfcf"
+      points="110,120 180,120 180,205 110,205"/>
+
+    <polygon
+      class="facet"
+      fill="#a8a8a8"
+      points="180,120 215,95 215,180 180,205"/>
+
+    <!-- lattice 1 -->
+    <polygon
+      class="interfere"
+      fill="url(#latticeA)"
+      points="110,120 180,120 180,205 110,205"/>
+
+    <!-- lattice 2 -->
+    <polygon
+      class="interfere"
+      fill="url(#latticeB)"
+      points="110,120 180,120 180,205 110,205"/>
+
+  </g>
+
+  <text x="470" y="360" class="label">
+    Two weak lattices. Static emergent texture. Candidate for future colour mapping.
+  </text>
+
+</svg>

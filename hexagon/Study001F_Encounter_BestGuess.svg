@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900">
+<style>
+svg{background:#fff}
+.hex{fill:none;stroke:#fff;stroke-width:2}
+.facet{stroke:#fff;stroke-width:2;stroke-linejoin:round}
+.tower-a .facet{fill:#5b8cff;fill-opacity:.42}
+.tower-b .facet{fill:#8f66ff;fill-opacity:.42}
+.tower-c .facet{fill:#58cf8d;fill-opacity:.42}
+.tower-d .facet{fill:#f2b24d;fill-opacity:.42}
+</style>
+<defs>
+<polygon id="hexagon" points="0,-38 33,-19 33,19 0,38 -33,19 -33,-19"/>
+</defs>
+
+<!-- Shared neighbourhood: slight overlap, rotated away from common centre -->
+<g id="shared-neighbourhood">
+
+<g id="tower-a" class="tower-a" transform="translate(420,560) rotate(-6)">
+ <polygon class="facet" points="-33,-19 0,-38 -8,-168 -42,-147"/>
+ <polygon class="facet" points="0,-38 33,-19 28,-150 -8,-168"/>
+ <polygon class="facet" points="33,-19 33,19 31,-110 28,-150"/>
+ <polygon class="facet" points="33,19 0,38 -3,-74 31,-110"/>
+ <polygon class="facet" points="0,38 -33,19 -39,-92 -3,-74"/>
+ <polygon class="facet" points="-33,19 -33,-19 -42,-147 -39,-92"/>
+ <use href="#hexagon" class="hex"/>
+ <use href="#hexagon" class="hex" transform="translate(-8,-128) rotate(4) scale(1.08)"/>
+</g>
+
+<g id="tower-b" class="tower-b" transform="translate(500,515) rotate(2)">
+ <polygon class="facet" points="-33,-19 0,-38 8,-178 -29,-160"/>
+ <polygon class="facet" points="0,-38 33,-19 44,-154 8,-178"/>
+ <polygon class="facet" points="33,-19 33,19 46,-113 44,-154"/>
+ <polygon class="facet" points="33,19 0,38 11,-72 46,-113"/>
+ <polygon class="facet" points="0,38 -33,19 -24,-88 11,-72"/>
+ <polygon class="facet" points="-33,19 -33,-19 -29,-160 -24,-88"/>
+ <use href="#hexagon" class="hex"/>
+ <use href="#hexagon" class="hex" transform="translate(8,-136) rotate(-3) scale(1.09)"/>
+</g>
+
+<g id="tower-c" class="tower-c" transform="translate(575,565) rotate(6)">
+ <polygon class="facet" points="-33,-19 0,-38 18,-158 -19,-140"/>
+ <polygon class="facet" points="0,-38 33,-19 52,-136 18,-158"/>
+ <polygon class="facet" points="33,-19 33,19 50,-95 52,-136"/>
+ <polygon class="facet" points="33,19 0,38 16,-60 50,-95"/>
+ <polygon class="facet" points="0,38 -33,19 -18,-78 16,-60"/>
+ <polygon class="facet" points="-33,19 -33,-19 -19,-140 -18,-78"/>
+ <use href="#hexagon" class="hex"/>
+ <use href="#hexagon" class="hex" transform="translate(18,-120) rotate(5) scale(1.06)"/>
+</g>
+
+<g id="tower-d" class="tower-d" transform="translate(495,620) rotate(0)">
+ <polygon class="facet" points="-33,-19 0,-38 -2,-146 -36,-128"/>
+ <polygon class="facet" points="0,-38 33,-19 2,-122 -2,-146"/>
+ <polygon class="facet" points="33,-19 33,19 2,-86 2,-122"/>
+ <polygon class="facet" points="33,19 0,38 -1,-48 2,-86"/>
+ <polygon class="facet" points="0,38 -33,19 -34,-67 -1,-48"/>
+ <polygon class="facet" points="-33,19 -33,-19 -36,-128 -34,-67"/>
+ <use href="#hexagon" class="hex"/>
+ <use href="#hexagon" class="hex" transform="translate(-2,-108) rotate(2) scale(1.04)"/>
+</g>
+
+</g>
+</svg>

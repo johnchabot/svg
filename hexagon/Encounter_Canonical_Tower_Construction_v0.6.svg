@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+<style>
+.base{fill:none;stroke:#b8b8b8;stroke-width:2;stroke-dasharray:8 6}
+.member{fill:none;stroke:#111;stroke-width:2.2}
+.axis{stroke:#d9d9d9;stroke-width:1.2}
+.note{font:18px sans-serif;fill:#333}
+.small{font:14px sans-serif;fill:#555}
+</style>
+
+<defs>
+<polygon id="hex" points="100,0 50,86.6025 -50,86.6025 -100,0 -50,-86.6025 50,-86.6025"/>
+</defs>
+
+<!-- Perspective construction plane -->
+<polygon class="base" points="220,285 680,285 760,640 140,640"/>
+
+<!-- Projected canonical D4 construction grid -->
+<polygon class="base" points="450,325 610,470 450,615 290,470"/>
+
+<!-- Canonical axes -->
+<line class="axis" x1="450" y1="250" x2="450" y2="720"/>
+<line class="axis" x1="250" y1="470" x2="650" y2="470"/>
+
+<!-- Tower -->
+<g transform="translate(450,565)">
+ <use href="#hex" class="member" transform="rotate(0)"/>
+</g>
+
+<g transform="translate(450,500) scale(0.93)">
+ <use href="#hex" class="member" transform="rotate(45)"/>
+</g>
+
+<g transform="translate(450,435) scale(0.86)">
+ <use href="#hex" class="member" transform="rotate(90)"/>
+</g>
+
+<g transform="translate(450,370) scale(0.79)">
+ <use href="#hex" class="member" transform="rotate(135)"/>
+</g>
+
+<circle cx="450" cy="470" r="4" fill="#222"/>
+
+<text x="24" y="36" class="note">Encounter – Canonical Tower Construction (v0.6)</text>
+<text x="24" y="64" class="small">Construction Plane (trapezoid) + Projected D₄ Diamond Grid + Construction Axis.</text>
+<text x="24" y="88" class="small">d = 0.75R, D = (3√2/4)R. No splay. No derived lattice. Geometry shown is construction only.</text>
+<text x="24" y="112" class="small">Next milestone: extend inherited member edges to discover—not draw—the central lattice.</text>
+
+</svg>

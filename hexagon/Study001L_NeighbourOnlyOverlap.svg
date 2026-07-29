@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 2200">
+<style>
+svg{background:#fff;color:#000}
+.hex{fill:none;stroke:currentColor;stroke-width:2.2;vector-effect:non-scaling-stroke}
+.link{stroke:currentColor;stroke-width:1.4;opacity:.75;fill:none;vector-effect:non-scaling-stroke}
+.note{font:20px monospace;fill:#777}
+</style>
+
+<defs>
+  <!-- Canonical hexagon -->
+  <polygon id="hexagon"
+    points="0,-56 48,-28 48,28 0,56 -48,28 -48,-28"/>
+</defs>
+
+<!-- Study001L : Only three changes from K
+     1. ~10% neighbour overlap
+     2. Opposite towers no longer overlap
+     3. Correspondence lines terminate on hexagon vertices
+-->
+<g id="remembered-neighbourhood" transform="translate(600,1320) rotate(-11)">
+
+  <!-- back -->
+  <g id="tower-back" transform="translate(0,-12)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(16,-410) rotate(-5) scale(1.04)"/>
+    <line class="link" x1="-48" y1="-28" x2="-34" y2="-438"/>
+    <line class="link" x1="0" y1="-56" x2="16" y2="-466"/>
+    <line class="link" x1="48" y1="-28" x2="66" y2="-438"/>
+    <line class="link" x1="48" y1="28" x2="66" y2="-382"/>
+    <line class="link" x1="0" y1="56" x2="16" y2="-354"/>
+    <line class="link" x1="-48" y1="28" x2="-34" y2="-382"/>
+  </g>
+
+  <!-- left : overlaps only back and front -->
+  <g id="tower-left" transform="translate(-86,38)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(-88,-398) rotate(7) scale(1.05)"/>
+    <line class="link" x1="-48" y1="-28" x2="-136" y2="-426"/>
+    <line class="link" x1="0" y1="-56" x2="-88" y2="-454"/>
+    <line class="link" x1="48" y1="-28" x2="-40" y2="-426"/>
+    <line class="link" x1="48" y1="28" x2="-40" y2="-370"/>
+    <line class="link" x1="0" y1="56" x2="-88" y2="-342"/>
+    <line class="link" x1="-48" y1="28" x2="-136" y2="-370"/>
+  </g>
+
+  <!-- right : overlaps only back and front -->
+  <g id="tower-right" transform="translate(86,38)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(88,-398) rotate(-7) scale(1.05)"/>
+    <line class="link" x1="-48" y1="-28" x2="40" y2="-426"/>
+    <line class="link" x1="0" y1="-56" x2="88" y2="-454"/>
+    <line class="link" x1="48" y1="-28" x2="136" y2="-426"/>
+    <line class="link" x1="48" y1="28" x2="136" y2="-370"/>
+    <line class="link" x1="0" y1="56" x2="88" y2="-342"/>
+    <line class="link" x1="-48" y1="28" x2="40" y2="-370"/>
+  </g>
+
+  <!-- front -->
+  <g id="tower-front" transform="translate(0,88)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(0,-372) rotate(3) scale(1.03)"/>
+    <line class="link" x1="-48" y1="-28" x2="-48" y2="-400"/>
+    <line class="link" x1="0" y1="-56" x2="0" y2="-428"/>
+    <line class="link" x1="48" y1="-28" x2="48" y2="-400"/>
+    <line class="link" x1="48" y1="28" x2="48" y2="-344"/>
+    <line class="link" x1="0" y1="56" x2="0" y2="-316"/>
+    <line class="link" x1="-48" y1="28" x2="-48" y2="-344"/>
+  </g>
+
+</g>
+</svg>

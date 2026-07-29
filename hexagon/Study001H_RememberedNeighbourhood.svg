@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900">
+<style>
+:root{
+  --canvas:#ffffff;
+  --wire:#000000;
+  --facet-opacity:.40;
+}
+svg{background:var(--canvas);color:var(--wire)}
+.wire{fill:none;stroke:currentColor;stroke-width:1.7;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.facet{fill:#000;fill-opacity:var(--facet-opacity);stroke:currentColor;stroke-width:1.7;vector-effect:non-scaling-stroke}
+.base{fill:none;stroke:none}
+</style>
+
+<defs>
+  <polygon id="hexagon" points="0,-34 29,-17 29,17 0,34 -29,17 -29,-17"/>
+</defs>
+
+<!-- Study001H : remembered neighbourhood first -->
+<g id="remembered-neighbourhood" transform="translate(500,500) rotate(-8)">
+
+  <!-- Bases intentionally interpenetrate.  They remain visible only by their vertical facets. -->
+  <g id="tower-back">
+    <use href="#hexagon" class="base" transform="translate(0,-18)"/>
+    <polygon class="facet" points="-29,-35 0,-52 8,-184 -24,-165"/>
+    <polygon class="facet" points="0,-52 29,-35 38,-158 8,-184"/>
+    <polygon class="facet" points="29,-35 29,-1 40,-120 38,-158"/>
+    <polygon class="facet" points="29,-1 0,16 10,-86 40,-120"/>
+    <polygon class="facet" points="0,16 -29,-1 -22,-98 10,-86"/>
+    <polygon class="facet" points="-29,-1 -29,-35 -24,-165 -22,-98"/>
+    <use href="#hexagon" class="wire" transform="translate(8,-132) rotate(-3) scale(1.08)"/>
+  </g>
+
+  <g id="tower-left" transform="translate(-18,14)">
+    <use href="#hexagon" class="base"/>
+    <polygon class="facet" points="-29,-17 0,-34 -8,-166 -38,-148"/>
+    <polygon class="facet" points="0,-34 29,-17 22,-146 -8,-166"/>
+    <polygon class="facet" points="29,-17 29,17 24,-112 22,-146"/>
+    <polygon class="facet" points="29,17 0,34 -4,-82 24,-112"/>
+    <polygon class="facet" points="0,34 -29,17 -35,-92 -4,-82"/>
+    <polygon class="facet" points="-29,17 -29,-17 -38,-148 -35,-92"/>
+    <use href="#hexagon" class="wire"/>
+    <use href="#hexagon" class="wire" transform="translate(-8,-128) rotate(4) scale(1.07)"/>
+  </g>
+
+  <g id="tower-right" transform="translate(18,14)">
+    <use href="#hexagon" class="base"/>
+    <polygon class="facet" points="-29,-17 0,-34 14,-164 -17,-145"/>
+    <polygon class="facet" points="0,-34 29,-17 44,-140 14,-164"/>
+    <polygon class="facet" points="29,-17 29,17 44,-105 44,-140"/>
+    <polygon class="facet" points="29,17 0,34 13,-74 44,-105"/>
+    <polygon class="facet" points="0,34 -29,17 -18,-86 13,-74"/>
+    <polygon class="facet" points="-29,17 -29,-17 -17,-145 -18,-86"/>
+    <use href="#hexagon" class="wire"/>
+    <use href="#hexagon" class="wire" transform="translate(14,-130) rotate(5) scale(1.06)"/>
+  </g>
+
+  <g id="tower-front" transform="translate(0,32)">
+    <use href="#hexagon" class="base"/>
+    <!-- corrected correspondence: no impossible diagonal -->
+    <polygon class="facet" points="-29,-17 0,-34 -2,-148 -31,-131"/>
+    <polygon class="facet" points="0,-34 29,-17 27,-129 -2,-148"/>
+    <polygon class="facet" points="29,-17 29,17 28,-92 27,-129"/>
+    <polygon class="facet" points="29,17 0,34 -1,-56 28,-92"/>
+    <polygon class="facet" points="0,34 -29,17 -30,-73 -1,-56"/>
+    <polygon class="facet" points="-29,17 -29,-17 -31,-131 -30,-73"/>
+    <use href="#hexagon" class="wire"/>
+    <use href="#hexagon" class="wire" transform="translate(-2,-114) rotate(2) scale(1.04)"/>
+  </g>
+
+</g>
+</svg>

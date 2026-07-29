@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Study001T
+This study intentionally shifts the manuscript one level deeper.
+
+The canonical hexagon exists only in construction space.
+Every vertex is projected individually onto the construction plane.
+The SVG polygons are therefore *results* of projection, not primitive geometry.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1400 2200">
+
+<style>
+svg{background:#fff;color:#000}
+.ground{fill:none;stroke:#bbb;stroke-width:1.2;stroke-dasharray:8 6}
+.projected{fill:none;stroke:currentColor;stroke-width:2.1}
+.correspondence{stroke:currentColor;stroke-width:1.15;opacity:.72}
+</style>
+
+<defs>
+
+  <!-- Construction-space coordinate system -->
+  <constructionPlane id="model-space"
+                     shape="rectangle"
+                     projection="isosceles-trapezoid"/>
+
+  <!-- Canonical regular hexagon lives ONLY in model space -->
+  <canonicalHexagon id="hex-model">
+    <vertex id="v1" u="0.000"  v="-1.000"/>
+    <vertex id="v2" u="0.866"  v="-0.500"/>
+    <vertex id="v3" u="0.866"  v="0.500"/>
+    <vertex id="v4" u="0.000"  v="1.000"/>
+    <vertex id="v5" u="-0.866" v="0.500"/>
+    <vertex id="v6" u="-0.866" v="-0.500"/>
+  </canonicalHexagon>
+
+  <!-- Canonical tower -->
+  <canonicalTower id="tower-model">
+    <base   href="#hex-model"/>
+    <cap    href="#hex-model"
+            scale="1.04"
+            height="430"
+            trajectory="outward"/>
+
+    <facet edge="1"/>
+    <facet edge="2"/>
+    <facet edge="3"/>
+    <facet edge="4"/>
+    <facet edge="5"/>
+    <facet edge="6"/>
+  </canonicalTower>
+
+</defs>
+
+<!-- Diagnostic projection plane -->
+<polygon class="ground"
+ points="490,1160 910,1160 1080,1680 320,1680"/>
+
+<!-- Four instances of ONE tower definition -->
+<g id="remembered-neighbourhood">
+
+  <towerInstance id="north"
+                 href="#tower-model"
+                 modelU="0.00"
+                 modelV="-0.34"
+                 rotation="0"/>
+
+  <towerInstance id="east"
+                 href="#tower-model"
+                 modelU="0.34"
+                 modelV="0.00"
+                 rotation="90"/>
+
+  <towerInstance id="south"
+                 href="#tower-model"
+                 modelU="0.00"
+                 modelV="0.34"
+                 rotation="180"/>
+
+  <towerInstance id="west"
+                 href="#tower-model"
+                 modelU="-0.34"
+                 modelV="0.00"
+                 rotation="270"/>
+
+</g>
+
+<!--
+Renderer responsibility:
+
+1. Project every hex-model vertex through the construction plane.
+2. Assemble projected polygons.
+3. Connect corresponding projected edges.
+4. Apply painter ordering.
+5. Apply appearance.
+-->
+
+</svg>

@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1000 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="background: #fdfdfd;">
+  <!-- Definition of a standard regular hexagon centered at (0,0) with a point facing "Due East" -->
+  <defs>
+    <polygon id="hexagon" points="100,0 50,86.603 -50,86.603 -100,0 -50,-86.603 50,-86.603" fill="#e3faf2" stroke="#00b4d8" stroke-width="3"/>
+    <circle id="center" cx="0" cy="0" r="4" fill="#03045e"/>
+    <!-- Line tracking the "Due East" vertex -->
+    <line id="pointer" x1="0" y1="0" x2="100" y2="0" stroke="#f72585" stroke-width="2" stroke-dasharray="4 2"/>
+  </defs>
+
+  <!-- 1. Hexagon at 0 degrees (Point pointing Due East) -->
+  <g transform="translate(150, 130)">
+    <use href="#hexagon" />
+    <use href="#pointer" />
+    <use href="#center" />
+    <text x="0" y="120" text-anchor="middle" font-family="sans-serif" font-weight="bold" fill="#333">0° (Due East)</text>
+  </g>
+
+  <!-- 2. Hexagon rotated 45 degrees (Point pointing North-East / Down-Right in standard SVG coordinates) -->
+  <g transform="translate(380, 130)">
+    <use href="#hexagon" transform="rotate(45)" />
+    <use href="#pointer" transform="rotate(45)" />
+    <use href="#center" />
+    <text x="0" y="120" text-anchor="middle" font-family="sans-serif" font-weight="bold" fill="#333">45° (North-East)</text>
+  </g>
+
+  <!-- 3. Hexagon rotated 90 degrees -->
+  <g transform="translate(610, 130)">
+    <use href="#hexagon" transform="rotate(90)" />
+    <use href="#pointer" transform="rotate(90)" />
+    <use href="#center" />
+    <text x="0" y="120" text-anchor="middle" font-family="sans-serif" font-weight="bold" fill="#333">90°</text>
+  </g>
+
+  <!-- 4. Hexagon rotated 135 degrees -->
+  <g transform="translate(840, 130)">
+    <use href="#hexagon" transform="rotate(135)" />
+    <use href="#pointer" transform="rotate(135)" />
+    <use href="#center" />
+    <text x="0" y="120" text-anchor="middle" font-family="sans-serif" font-weight="bold" fill="#333">135°</text>
+  </g>
+</svg>

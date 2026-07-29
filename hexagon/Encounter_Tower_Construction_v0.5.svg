@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+<style>
+.base{fill:none;stroke:#b8b8b8;stroke-width:2;stroke-dasharray:8 6}
+.member{fill:none;stroke:#111;stroke-width:2.2}
+.guide{stroke:#ddd;stroke-width:1}
+.note{font:18px sans-serif;fill:#333}
+.small{font:14px sans-serif;fill:#555}
+</style>
+
+<defs>
+<polygon id="hex" points="100,0 50,86.6025 -50,86.6025 -100,0 -50,-86.6025 50,-86.6025"/>
+</defs>
+
+<!-- Perspective base (top edge is nearest the viewer) -->
+<polygon class="base"
+ points="250,250 650,250 760,640 140,640"/>
+
+<!-- Vertical guide lines -->
+<line class="guide" x1="250" y1="250" x2="250" y2="640"/>
+<line class="guide" x1="650" y1="250" x2="650" y2="640"/>
+
+<!-- Tower construction -->
+<g transform="translate(450,520)">
+  <!-- bottom -->
+  <use href="#hex" class="member" transform="rotate(0)"/>
+</g>
+
+<g transform="translate(450,455) scale(0.93)">
+  <use href="#hex" class="member" transform="rotate(45)"/>
+</g>
+
+<g transform="translate(450,390) scale(0.86)">
+  <use href="#hex" class="member" transform="rotate(90)"/>
+</g>
+
+<g transform="translate(450,325) scale(0.79)">
+  <use href="#hex" class="member" transform="rotate(135)"/>
+</g>
+
+<circle cx="450" cy="455" r="3.5" fill="#333"/>
+
+<text x="25" y="34" class="note">Encounter – Tower Construction Draft (v0.5)</text>
+<text x="25" y="62" class="small">Top of the neighbourhood faces the viewer. Shared trapezoidal construction plane retained.</text>
+<text x="25" y="84" class="small">Relative heights only. No splay, convergence, or edge-derived lattice yet.</text>
+<text x="25" y="106" class="small">Current construction assumptions: d = 0.75R, D = (3√2/4)R.</text>
+
+</svg>

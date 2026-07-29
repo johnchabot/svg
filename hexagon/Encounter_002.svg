@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+<style>
+.base{fill:none;stroke:#bcbcbc;stroke-width:2;stroke-dasharray:8 6}
+.top{fill:none;stroke:#111;stroke-width:2.2}
+.bot{fill:none;stroke:#555;stroke-width:1.3}
+.face{fill:none;stroke:#222;stroke-width:1.4}
+.note{font:16px sans-serif;fill:#444}
+</style>
+
+<!--
+Encounter_002
+Experimental construction:
+- Overlapping placement (approximate d=0.75R layout)
+- Rear tallest
+- Heights taper counter-clockwise
+- Front vertex / rear facet
+- True prism construction (top+bottom polygons joined by corresponding vertices)
+- Construction plane and members intended to share one projection
+-->
+
+<defs>
+  <!-- point-up -->
+  <polygon id="hexP" points="0,-55 47,-27.5 47,27.5 0,55 -47,27.5 -47,-27.5"/>
+  <!-- flat-up -->
+  <polygon id="hexF" points="55,0 27.5,47 -27.5,47 -55,0 -27.5,-47 27.5,-47"/>
+</defs>
+
+<!-- construction plane -->
+<polygon class="base" points="250,180 750,180 860,620 140,620"/>
+
+<!-- REAR (tallest, flat) -->
+<g transform="translate(500,270)">
+  <use href="#hexF" class="top"/>
+  <g transform="translate(0,230)">
+    <use href="#hexF" class="bot"/>
+  </g>
+  <g class="face">
+    <line x1="55" y1="0" x2="55" y2="230"/>
+    <line x1="27.5" y1="47" x2="27.5" y2="277"/>
+    <line x1="-27.5" y1="47" x2="-27.5" y2="277"/>
+    <line x1="-55" y1="0" x2="-55" y2="230"/>
+    <line x1="-27.5" y1="-47" x2="-27.5" y2="183"/>
+    <line x1="27.5" y1="-47" x2="27.5" y2="183"/>
+  </g>
+</g>
+
+<!-- LEFT -->
+<g transform="translate(430,360)">
+  <use href="#hexP" class="top" transform="rotate(135)"/>
+  <g transform="translate(0,180)">
+    <use href="#hexP" class="bot" transform="rotate(135)"/>
+  </g>
+  <g class="face">
+    <line x1="0" y1="-55" x2="0" y2="125"/>
+    <line x1="47" y1="-27.5" x2="47" y2="152.5"/>
+    <line x1="47" y1="27.5" x2="47" y2="207.5"/>
+    <line x1="0" y1="55" x2="0" y2="235"/>
+    <line x1="-47" y1="27.5" x2="-47" y2="207.5"/>
+    <line x1="-47" y1="-27.5" x2="-47" y2="152.5"/>
+  </g>
+</g>
+
+<!-- FRONT -->
+<g transform="translate(500,430)">
+  <use href="#hexP" class="top"/>
+  <g transform="translate(0,140)">
+    <use href="#hexP" class="bot"/>
+  </g>
+  <g class="face">
+    <line x1="0" y1="-55" x2="0" y2="85"/>
+    <line x1="47" y1="-27.5" x2="47" y2="112.5"/>
+    <line x1="47" y1="27.5" x2="47" y2="167.5"/>
+    <line x1="0" y1="55" x2="0" y2="195"/>
+    <line x1="-47" y1="27.5" x2="-47" y2="167.5"/>
+    <line x1="-47" y1="-27.5" x2="-47" y2="112.5"/>
+  </g>
+</g>
+
+<!-- RIGHT (shortest) -->
+<g transform="translate(570,360)">
+  <use href="#hexP" class="top" transform="rotate(45)"/>
+  <g transform="translate(0,100)">
+    <use href="#hexP" class="bot" transform="rotate(45)"/>
+  </g>
+  <g class="face">
+    <line x1="0" y1="-55" x2="0" y2="45"/>
+    <line x1="47" y1="-27.5" x2="47" y2="72.5"/>
+    <line x1="47" y1="27.5" x2="47" y2="127.5"/>
+    <line x1="0" y1="55" x2="0" y2="155"/>
+    <line x1="-47" y1="27.5" x2="-47" y2="127.5"/>
+    <line x1="-47" y1="-27.5" x2="-47" y2="72.5"/>
+  </g>
+</g>
+
+<text x="20" y="30" class="note">Encounter_002 – Experimental Prism Construction</text>
+<text x="20" y="55" class="note">Focus: overlapping placement, polygonal prisms, CCW height taper. Projection still to be refined.</text>
+
+</svg>

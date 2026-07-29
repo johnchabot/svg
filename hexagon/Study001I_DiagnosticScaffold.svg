@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2200">
+<style>
+:root{
+ --canvas:#fff;
+ --wire:#000;
+ --facet-opacity:0.12;
+}
+svg{background:var(--canvas);color:var(--wire)}
+.wire{
+ fill:none;
+ stroke:currentColor;
+ stroke-width:2;
+ stroke-linejoin:round;
+ vector-effect:non-scaling-stroke;
+}
+.facet{
+ fill:#000;
+ fill-opacity:var(--facet-opacity);
+ stroke:none;
+}
+.hidden{display:none;} /* placeholder for future painter ordering */
+</style>
+
+<defs>
+ <polygon id="hexagon"
+   points="0,-42 36,-21 36,21 0,42 -36,21 -36,-21"/>
+</defs>
+
+<!-- Study001I : diagnostic scaffold -->
+<g id="remembered-neighbourhood" transform="translate(700,1220) rotate(-10)">
+
+  <!-- Back -->
+  <g id="tower-back">
+    <use href="#hexagon" transform="translate(0,-10)" class="wire"/>
+    <use href="#hexagon" transform="translate(10,-170) rotate(-2) scale(1.05)" class="wire"/>
+    <!-- translucent scaffold only -->
+    <polygon class="facet" points="-36,-31 0,-52 10,-191 -28,-169"/>
+    <polygon class="facet" points="0,-52 36,-31 46,-164 10,-191"/>
+    <polygon class="facet" points="36,-31 36,11 46,-122 46,-164"/>
+    <polygon class="facet" points="36,11 0,32 10,-82 46,-122"/>
+    <polygon class="facet" points="0,32 -36,11 -28,-92 10,-82"/>
+    <polygon class="facet" points="-36,11 -36,-31 -28,-169 -28,-92"/>
+  </g>
+
+  <!-- Left -->
+  <g id="tower-left" transform="translate(-28,18)">
+    <use href="#hexagon" class="wire"/>
+    <use href="#hexagon" transform="translate(-10,-162) rotate(4) scale(1.05)" class="wire"/>
+  </g>
+
+  <!-- Right -->
+  <g id="tower-right" transform="translate(28,18)">
+    <use href="#hexagon" class="wire"/>
+    <use href="#hexagon" transform="translate(12,-160) rotate(5) scale(1.05)" class="wire"/>
+  </g>
+
+  <!-- Front -->
+  <g id="tower-front" transform="translate(0,40)">
+    <use href="#hexagon" class="wire"/>
+    <use href="#hexagon" transform="translate(0,-150) rotate(2) scale(1.03)" class="wire"/>
+  </g>
+
+</g>
+</svg>

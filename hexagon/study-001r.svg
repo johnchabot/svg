@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<!--
+Study 001R — Relationships
+
+Canvas
+ ↓
+Composition
+ ↓
+Cluster
+ ↓
+A B C D
+ ↓
+Geometry
+-->
+<style>
+line{stroke:#555;stroke-width:2}
+circle{fill:#2B2B2B}
+text{font:14px monospace}
+</style>
+<text x="270" y="40">Canvas</text>
+<line x1="300" y1="50" x2="300" y2="80"/>
+<text x="255" y="100">Composition</text>
+<line x1="300" y1="110" x2="300" y2="140"/>
+<text x="275" y="160">Cluster</text>
+<line x1="300" y1="170" x2="300" y2="210"/>
+<circle cx="240" cy="250" r="12"/><text x="235" y="255">A</text>
+<circle cx="300" cy="230" r="12"/><text x="295" y="235">B</text>
+<circle cx="360" cy="250" r="12"/><text x="355" y="255">C</text>
+<circle cx="300" cy="290" r="12"/><text x="295" y="295">D</text>
+<line x1="300" y1="210" x2="240" y2="238"/>
+<line x1="300" y1="210" x2="300" y2="218"/>
+<line x1="300" y1="210" x2="360" y2="238"/>
+<line x1="300" y1="210" x2="300" y2="278"/>
+<text x="270" y="360">Geometry</text>
+</svg>

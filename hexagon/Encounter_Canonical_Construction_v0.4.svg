@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+<style>
+.guide{fill:none;stroke:#bbb;stroke-dasharray:7 5}
+.member{fill:none;stroke:#111;stroke-width:2.2}
+.axis{stroke:#ddd;stroke-width:1}
+.note{font:18px sans-serif;fill:#333}
+.small{font:14px sans-serif;fill:#555}
+</style>
+<defs>
+<polygon id="hex" points="100,0 50,86.6025 -50,86.6025 -100,0 -50,-86.6025 50,-86.6025"/>
+</defs>
+<line class="axis" x1="450" y1="80" x2="450" y2="820"/>
+<line class="axis" x1="80" y1="450" x2="820" y2="450"/>
+<polygon class="guide" points="450,230 670,450 450,670 230,450"/>
+<g transform="translate(450,525)"><use href="#hex" class="member" transform="rotate(0)"/></g>
+<g transform="translate(525,450)"><use href="#hex" class="member" transform="rotate(45)"/></g>
+<g transform="translate(450,375)"><use href="#hex" class="member" transform="rotate(90)"/></g>
+<g transform="translate(375,450)"><use href="#hex" class="member" transform="rotate(135)"/></g>
+<circle cx="450" cy="450" r="4" fill="#222"/>
+<text x="24" y="34" class="note">Encounter – Canonical Construction (v0.4 Draft)</text>
+<text x="24" y="64" class="small">R = 100, d = 0.75R, D = (3√2/4)R ≈ 1.06066R</text>
+<text x="24" y="90" class="small">Construction only. The central lattice is intentionally omitted.</text>
+<text x="24" y="116" class="small">Next step: derive the inner lattice exclusively from inherited edge intersections.</text>
+</svg>

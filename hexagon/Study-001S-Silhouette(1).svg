@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+<!--
+Study 001S — Silhouette
+Relationships are authored.
+Perception emerges.
+The hexagon is the primitive.
+Study only. Honest, incomplete.
+-->
+
+<style>
+.edge{fill:none;stroke:#111;stroke-width:1.4;stroke-linejoin:round}
+</style>
+<rect width="600" height="600" fill="white"/>
+<g id="cluster">
+
+<g transform="translate(300,330) rotate(0)">
+  <polygon class="edge" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="edge" points="-40,10 0,30 0,-155 -40,-175"/>
+  <polygon class="edge" points="0,30 40,10 40,-175 0,-155"/>
+  <line class="edge" x1="-40" y1="-10" x2="-40" y2="-175"/>
+  <line class="edge" x1="40" y1="-10" x2="40" y2="-175"/>
+</g>
+<g transform="translate(266,352) rotate(-4)">
+  <polygon class="edge" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="edge" points="-40,10 0,30 0,-125 -40,-145"/>
+  <polygon class="edge" points="0,30 40,10 40,-145 0,-125"/>
+  <line class="edge" x1="-40" y1="-10" x2="-40" y2="-145"/>
+  <line class="edge" x1="40" y1="-10" x2="40" y2="-145"/>
+</g>
+<g transform="translate(336,346) rotate(3)">
+  <polygon class="edge" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="edge" points="-40,10 0,30 0,-135 -40,-155"/>
+  <polygon class="edge" points="0,30 40,10 40,-155 0,-135"/>
+  <line class="edge" x1="-40" y1="-10" x2="-40" y2="-155"/>
+  <line class="edge" x1="40" y1="-10" x2="40" y2="-155"/>
+</g>
+<g transform="translate(302,370) rotate(1)">
+  <polygon class="edge" points="-40,-10 0,-30 40,-10 40,10 0,30 -40,10"/>
+  <polygon class="edge" points="-40,10 0,30 0,-102 -40,-122"/>
+  <polygon class="edge" points="0,30 40,10 40,-122 0,-102"/>
+  <line class="edge" x1="-40" y1="-10" x2="-40" y2="-122"/>
+  <line class="edge" x1="40" y1="-10" x2="40" y2="-122"/>
+</g>
+</g>
+</svg>

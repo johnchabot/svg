@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sculpture id="Study001E">
+
+    <defs>
+
+        <hexagon id="hexagon">
+
+            <vertex id="1"/>
+            <vertex id="2"/>
+            <vertex id="3"/>
+            <vertex id="4"/>
+            <vertex id="5"/>
+            <vertex id="6"/>
+
+        </hexagon>
+
+    </defs>
+
+
+    <neighbourhood>
+
+        <tower id="A">
+
+            <hexagon role="base"/>
+
+            <hexagon role="cap"/>
+
+            <face edge="1"/>
+            <face edge="2"/>
+            <face edge="3"/>
+            <face edge="4"/>
+            <face edge="5"/>
+            <face edge="6"/>
+
+            <appearance
+                hue="blue"
+                opacity="0.28"
+                wireframe="white"/>
+
+        </tower>
+
+
+        <tower id="B">
+
+            <hexagon role="base"/>
+
+            <hexagon role="cap"/>
+
+            <face edge="1"/>
+            <face edge="2"/>
+            <face edge="3"/>
+            <face edge="4"/>
+            <face edge="5"/>
+            <face edge="6"/>
+
+            <appearance
+                hue="violet"
+                opacity="0.28"
+                wireframe="white"/>
+
+        </tower>
+
+
+        <tower id="C">
+
+            <hexagon role="base"/>
+
+            <hexagon role="cap"/>
+
+            <face edge="1"/>
+            <face edge="2"/>
+            <face edge="3"/>
+            <face edge="4"/>
+            <face edge="5"/>
+            <face edge="6"/>
+
+            <appearance
+                hue="green"
+                opacity="0.28"
+                wireframe="white"/>
+
+        </tower>
+
+
+        <tower id="D">
+
+            <hexagon role="base"/>
+
+            <hexagon role="cap"/>
+
+            <face edge="1"/>
+            <face edge="2"/>
+            <face edge="3"/>
+            <face edge="4"/>
+            <face edge="5"/>
+            <face edge="6"/>
+
+            <appearance
+                hue="amber"
+                opacity="0.28"
+                wireframe="white"/>
+
+        </tower>
+
+    </neighbourhood>
+
+</sculpture>

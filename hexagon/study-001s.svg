@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<!--
+Study 001S — Silhouette
+Relationships are authored.
+Perception emerges.
+-->
+<style>.s{fill:#2B2B2B;stroke:black;stroke-width:1.5}</style>
+<path class="s" d="M260 360 L260 205 L300 180 L340 205 L340 340
+L372 320 L372 185 L412 165 L452 185 L452 340
+L420 360 L420 465 L380 485 L340 465
+L340 390 L300 410 L260 390 Z"/>
+</svg>

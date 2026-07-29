@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2200">
+<style>
+svg{background:#fff;color:#000}
+.ground{fill:none;stroke:#b8b8b8;stroke-width:1.2;stroke-dasharray:8 6}
+.hex{fill:none;stroke:currentColor;stroke-width:2.1}
+.link{stroke:currentColor;stroke-width:1.15;opacity:.72}
+</style>
+
+<polygon class="ground" points="490.0,1160.0 910.0,1160.0 1080.0,1680.0 320.0,1680.0"/>
+<g id="remembered-neighbourhood">
+<g id="tower-1">
+<polygon class="hex" points="700.0,1321.8 746.8,1348.8 746.8,1402.8 700.0,1429.8 653.2,1402.8 653.2,1348.8"/>
+<polygon class="hex" points="700.0,858.4 748.6,886.5 748.6,942.7 700.0,970.8 651.4,942.7 651.4,886.5"/>
+<line class="link" x1="700.0" y1="1321.8" x2="700.0" y2="858.4"/>
+<line class="link" x1="746.8" y1="1348.8" x2="748.6" y2="886.5"/>
+<line class="link" x1="746.8" y1="1402.8" x2="748.6" y2="942.7"/>
+<line class="link" x1="700.0" y1="1429.8" x2="700.0" y2="970.8"/>
+<line class="link" x1="653.2" y1="1402.8" x2="651.4" y2="942.7"/>
+<line class="link" x1="653.2" y1="1348.8" x2="651.4" y2="886.5"/>
+</g>
+<g id="tower-2">
+<polygon class="hex" points="854.3,1420.0 827.3,1466.8 773.3,1466.8 746.3,1420.0 773.3,1373.2 827.3,1373.2"/>
+<polygon class="hex" points="927.3,990.0 899.2,1038.6 843.0,1038.6 814.9,990.0 843.0,941.4 899.2,941.4"/>
+<line class="link" x1="854.3" y1="1420.0" x2="927.3" y2="990.0"/>
+<line class="link" x1="827.3" y1="1466.8" x2="899.2" y2="1038.6"/>
+<line class="link" x1="773.3" y1="1466.8" x2="843.0" y2="1038.6"/>
+<line class="link" x1="746.3" y1="1420.0" x2="814.9" y2="990.0"/>
+<line class="link" x1="773.3" y1="1373.2" x2="843.0" y2="941.4"/>
+<line class="link" x1="827.3" y1="1373.2" x2="899.2" y2="941.4"/>
+</g>
+<g id="tower-3">
+<polygon class="hex" points="700.0,1518.2 653.2,1491.2 653.2,1437.2 700.0,1410.2 746.8,1437.2 746.8,1491.2"/>
+<polygon class="hex" points="700.0,1121.6 651.4,1093.5 651.4,1037.3 700.0,1009.2 748.6,1037.3 748.6,1093.5"/>
+<line class="link" x1="700.0" y1="1518.2" x2="700.0" y2="1121.6"/>
+<line class="link" x1="653.2" y1="1491.2" x2="651.4" y2="1093.5"/>
+<line class="link" x1="653.2" y1="1437.2" x2="651.4" y2="1037.3"/>
+<line class="link" x1="700.0" y1="1410.2" x2="700.0" y2="1009.2"/>
+<line class="link" x1="746.8" y1="1437.2" x2="748.6" y2="1037.3"/>
+<line class="link" x1="746.8" y1="1491.2" x2="748.6" y2="1093.5"/>
+</g>
+<g id="tower-4">
+<polygon class="hex" points="545.7,1420.0 572.7,1373.2 626.7,1373.2 653.7,1420.0 626.7,1466.8 572.7,1466.8"/>
+<polygon class="hex" points="472.7,990.0 500.8,941.4 557.0,941.4 585.1,990.0 557.0,1038.6 500.8,1038.6"/>
+<line class="link" x1="545.7" y1="1420.0" x2="472.7" y2="990.0"/>
+<line class="link" x1="572.7" y1="1373.2" x2="500.8" y2="941.4"/>
+<line class="link" x1="626.7" y1="1373.2" x2="557.0" y2="941.4"/>
+<line class="link" x1="653.7" y1="1420.0" x2="585.1" y2="990.0"/>
+<line class="link" x1="626.7" y1="1466.8" x2="557.0" y2="1038.6"/>
+<line class="link" x1="572.7" y1="1466.8" x2="500.8" y2="1038.6"/>
+</g>
+</g></svg>

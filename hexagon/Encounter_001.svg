@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+<style>
+.base{fill:none;stroke:#b9b9b9;stroke-width:2;stroke-dasharray:8 6}
+.top{fill:none;stroke:#111;stroke-width:2.2}
+.edge{stroke:#111;stroke-width:1.6}
+.note{font:18px sans-serif;fill:#333}
+.small{font:14px sans-serif;fill:#555}
+</style>
+
+<defs>
+  <!-- Point-up hexagon -->
+  <polygon id="hexPoint"
+    points="0,-70 60,-35 60,35 0,70 -60,35 -60,-35"/>
+  <!-- Flat-up hexagon -->
+  <polygon id="hexFlat"
+    points="70,0 35,60.62 -35,60.62 -70,0 -35,-60.62 35,-60.62"/>
+</defs>
+
+<!-- Construction plane -->
+<polygon class="base" points="210,270 690,270 770,650 130,650"/>
+
+<!-- Helper: each prism is represented by a top face and six vertical edges -->
+
+<!-- Rear (A) - tallest -->
+<g transform="translate(450,285)">
+  <use href="#hexFlat" class="top"/>
+  <g class="edge">
+    <line x1="70" y1="0" x2="70" y2="300"/>
+    <line x1="35" y1="60.62" x2="35" y2="360.62"/>
+    <line x1="-35" y1="60.62" x2="-35" y2="360.62"/>
+    <line x1="-70" y1="0" x2="-70" y2="300"/>
+    <line x1="-35" y1="-60.62" x2="-35" y2="239.38"/>
+    <line x1="35" y1="-60.62" x2="35" y2="239.38"/>
+  </g>
+</g>
+
+<!-- Left (B) -->
+<g transform="translate(315,405)">
+  <use href="#hexPoint" class="top" transform="rotate(135)"/>
+  <g class="edge">
+    <line x1="0" y1="-70" x2="0" y2="180"/>
+    <line x1="60" y1="-35" x2="60" y2="215"/>
+    <line x1="60" y1="35" x2="60" y2="285"/>
+    <line x1="0" y1="70" x2="0" y2="320"/>
+    <line x1="-60" y1="35" x2="-60" y2="285"/>
+    <line x1="-60" y1="-35" x2="-60" y2="215"/>
+  </g>
+</g>
+
+<!-- Front (C) -->
+<g transform="translate(450,520)">
+  <use href="#hexPoint" class="top"/>
+  <g class="edge">
+    <line x1="0" y1="-70" x2="0" y2="110"/>
+    <line x1="60" y1="-35" x2="60" y2="145"/>
+    <line x1="60" y1="35" x2="60" y2="215"/>
+    <line x1="0" y1="70" x2="0" y2="250"/>
+    <line x1="-60" y1="35" x2="-60" y2="215"/>
+    <line x1="-60" y1="-35" x2="-60" y2="145"/>
+  </g>
+</g>
+
+<!-- Right (D) - shortest -->
+<g transform="translate(585,405)">
+  <use href="#hexPoint" class="top" transform="rotate(45)"/>
+  <g class="edge">
+    <line x1="0" y1="-70" x2="0" y2="70"/>
+    <line x1="60" y1="-35" x2="60" y2="105"/>
+    <line x1="60" y1="35" x2="60" y2="175"/>
+    <line x1="0" y1="70" x2="0" y2="210"/>
+    <line x1="-60" y1="35" x2="-60" y2="175"/>
+    <line x1="-60" y1="-35" x2="-60" y2="105"/>
+  </g>
+</g>
+
+<text x="22" y="34" class="note">Encounter_001 — Canonical Tower Study</text>
+<text x="22" y="60" class="small">Working construction: rear tower tallest; heights taper counter-clockwise (rear → left → front → right).</text>
+<text x="22" y="82" class="small">The diamond neighbourhood is implicit in tower placement and is intentionally not drawn.</text>
+
+</svg>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2200">
+<style>
+svg{background:#fff;color:#000}
+.hex{fill:none;stroke:currentColor;stroke-width:2.2;vector-effect:non-scaling-stroke}
+.link{fill:none;stroke:currentColor;stroke-width:1.25;opacity:.75;vector-effect:non-scaling-stroke}
+</style>
+<defs>
+<polygon id="hexagon" points="0,-56 48,-28 48,28 0,56 -48,28 -48,-28"/>
+</defs>
+
+<!-- Study001M : symmetric neighbourhood experiment -->
+<g transform="translate(700,1280)">
+
+  <!-- base neighbourhood: rotationally symmetric, ~10% neighbour overlap -->
+  <!-- back -->
+  <g id="tower-back">
+    <use href="#hexagon" class="hex" transform="translate(0,-62)"/>
+    <use href="#hexagon" class="hex" transform="translate(0,-470) rotate(-4) scale(1.04)"/>
+    <line class="link" x1="-48" y1="-90" x2="-48" y2="-498"/>
+    <line class="link" x1="0" y1="-118" x2="0" y2="-526"/>
+    <line class="link" x1="48" y1="-90" x2="48" y2="-498"/>
+    <line class="link" x1="48" y1="-34" x2="48" y2="-442"/>
+    <line class="link" x1="0" y1="-6" x2="0" y2="-414"/>
+    <line class="link" x1="-48" y1="-34" x2="-48" y2="-442"/>
+  </g>
+
+  <!-- left -->
+  <g id="tower-left" transform="translate(-82,20)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(-64,-430) rotate(6) scale(1.04)"/>
+    <line class="link" x1="-48" y1="-28" x2="-112" y2="-458"/>
+    <line class="link" x1="0" y1="-56" x2="-64" y2="-486"/>
+    <line class="link" x1="48" y1="-28" x2="-16" y2="-458"/>
+    <line class="link" x1="48" y1="28" x2="-16" y2="-402"/>
+    <line class="link" x1="0" y1="56" x2="-64" y2="-374"/>
+    <line class="link" x1="-48" y1="28" x2="-112" y2="-402"/>
+  </g>
+
+  <!-- right -->
+  <g id="tower-right" transform="translate(82,20)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(64,-430) rotate(-6) scale(1.04)"/>
+    <line class="link" x1="-48" y1="-28" x2="16" y2="-458"/>
+    <line class="link" x1="0" y1="-56" x2="64" y2="-486"/>
+    <line class="link" x1="48" y1="-28" x2="112" y2="-458"/>
+    <line class="link" x1="48" y1="28" x2="112" y2="-402"/>
+    <line class="link" x1="0" y1="56" x2="64" y2="-374"/>
+    <line class="link" x1="-48" y1="28" x2="16" y2="-402"/>
+  </g>
+
+  <!-- front -->
+  <g id="tower-front" transform="translate(0,102)">
+    <use href="#hexagon" class="hex"/>
+    <use href="#hexagon" class="hex" transform="translate(0,-408) rotate(3) scale(1.04)"/>
+    <line class="link" x1="-48" y1="-28" x2="-48" y2="-436"/>
+    <line class="link" x1="0" y1="-56" x2="0" y2="-464"/>
+    <line class="link" x1="48" y1="-28" x2="48" y2="-436"/>
+    <line class="link" x1="48" y1="28" x2="48" y2="-380"/>
+    <line class="link" x1="0" y1="56" x2="0" y2="-352"/>
+    <line class="link" x1="-48" y1="28" x2="-48" y2="-380"/>
+  </g>
+
+</g>
+</svg>
