@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="385" height="315" viewBox="0 0 385 315">
+<defs>
+<pattern id="checker" width="24" height="24" patternUnits="userSpaceOnUse">
+  <rect width="24" height="24" fill="#d8d8d8"/>
+  <rect width="12" height="12" fill="#efefef"/>
+  <rect x="12" y="12" width="12" height="12" fill="#efefef"/>
+</pattern>
+
+<filter id="soft" x="-5%" y="-5%" width="110%" height="110%">
+ <feGaussianBlur stdDeviation="0.25"/>
+</filter>
+
+<radialGradient id="blue" cx="42%" cy="38%" r="85%">
+ <stop offset="0%" stop-color="#5fb3ff" stop-opacity=".50"/>
+ <stop offset="100%" stop-color="#1b5fbf" stop-opacity=".42"/>
+</radialGradient>
+<radialGradient id="yellow" cx="58%" cy="42%" r="85%">
+ <stop offset="0%" stop-color="#fff173" stop-opacity=".50"/>
+ <stop offset="100%" stop-color="#d8b400" stop-opacity=".42"/>
+</radialGradient>
+<radialGradient id="cyan" cx="45%" cy="45%" r="85%">
+ <stop offset="0%" stop-color="#6ef5ff" stop-opacity=".50"/>
+ <stop offset="100%" stop-color="#00a9b8" stop-opacity=".42"/>
+</radialGradient>
+<radialGradient id="magenta" cx="55%" cy="40%" r="85%">
+ <stop offset="0%" stop-color="#ff86ea" stop-opacity=".50"/>
+ <stop offset="100%" stop-color="#b64197" stop-opacity=".42"/>
+</radialGradient>
+<radialGradient id="green" cx="48%" cy="40%" r="85%">
+ <stop offset="0%" stop-color="#89ff8d" stop-opacity=".50"/>
+ <stop offset="100%" stop-color="#2d9a4a" stop-opacity=".42"/>
+</radialGradient>
+<radialGradient id="red" cx="50%" cy="40%" r="85%">
+ <stop offset="0%" stop-color="#ff8b8b" stop-opacity=".50"/>
+ <stop offset="100%" stop-color="#c63b3b" stop-opacity=".42"/>
+</radialGradient>
+
+<linearGradient id="band" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="white" stop-opacity="0"/>
+ <stop offset="46%" stop-color="white" stop-opacity="0"/>
+ <stop offset="50%" stop-color="#78d8ff" stop-opacity=".18"/>
+ <stop offset="53%" stop-color="#b58cff" stop-opacity=".20"/>
+ <stop offset="56%" stop-color="#ffe27a" stop-opacity=".22"/>
+ <stop offset="60%" stop-color="white" stop-opacity="0"/>
+ <stop offset="100%" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="url(#checker)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#blue)" filter="url(#soft)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#blue)"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#yellow)" filter="url(#soft)"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#yellow)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#cyan)" filter="url(#soft)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#cyan)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#band)"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#magenta)" filter="url(#soft)"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#magenta)"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#green)" filter="url(#soft)"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#green)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#red)" filter="url(#soft)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#red)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#band)"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#yellow)" filter="url(#soft)"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#yellow)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#blue)" filter="url(#soft)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#blue)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#band)"/>
+
+<g fill="none" stroke="#404040" stroke-opacity="0.42" stroke-width="0.9">
+<polygon points="4,58 126,6 292,4 378,52 378,224 274,310 74,306 28,220"/>
+<line x1="50" y1="122" x2="74" y2="306"/>
+<line x1="264" y1="122" x2="274" y2="310"/>
+<line x1="126" y1="6" x2="142" y2="156"/>
+<line x1="292" y1="4" x2="298" y2="156"/>
+<line x1="378" y1="52" x2="378" y2="224"/>
+<line x1="50" y1="122" x2="264" y2="122"/>
+<line x1="142" y1="156" x2="298" y2="156"/>
+<line x1="74" y1="306" x2="274" y2="310"/>
+<line x1="4" y1="58" x2="50" y2="122"/>
+<line x1="264" y1="122" x2="378" y2="52"/>
+<line x1="28" y1="220" x2="142" y2="156"/>
+<line x1="298" y1="156" x2="378" y2="224"/>
+</g>
+</svg>

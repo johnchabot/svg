@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="385" height="315" viewBox="0 0 385 315">
+<defs>
+<pattern id="checker" width="24" height="24" patternUnits="userSpaceOnUse">
+  <rect width="24" height="24" fill="#d8d8d8"/>
+  <rect width="12" height="12" fill="#efefef"/>
+  <rect x="12" y="12" width="12" height="12" fill="#efefef"/>
+</pattern>
+
+<filter id="softFacet" x="-5%" y="-5%" width="110%" height="110%">
+  <feGaussianBlur stdDeviation="1.1"/>
+</filter>
+
+<radialGradient id="gA" cx="50%" cy="45%" r="75%">
+ <stop offset="0%" stop-color="#6f8fa8" stop-opacity="0.88"/>
+ <stop offset="55%" stop-color="#43698d" stop-opacity="0.82"/>
+ <stop offset="100%" stop-color="#1b3765" stop-opacity="0.70"/>
+</radialGradient>
+
+<radialGradient id="gB" cx="45%" cy="50%" r="80%">
+ <stop offset="0%" stop-color="#d9d18a" stop-opacity="0.84"/>
+ <stop offset="45%" stop-color="#8fa09b" stop-opacity="0.78"/>
+ <stop offset="100%" stop-color="#4c657d" stop-opacity="0.68"/>
+</radialGradient>
+</defs>
+
+<rect width="100%" height="100%" fill="url(#checker)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#gA)" filter="url(#softFacet)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#gA)" fill-opacity="0.72"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#gB)" filter="url(#softFacet)"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#gB)" fill-opacity="0.72"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#gA)" filter="url(#softFacet)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#gA)" fill-opacity="0.72"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#gB)" filter="url(#softFacet)"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#gB)" fill-opacity="0.72"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#gA)" filter="url(#softFacet)"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#gA)" fill-opacity="0.72"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#gB)" filter="url(#softFacet)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#gB)" fill-opacity="0.72"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#gA)" filter="url(#softFacet)"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#gA)" fill-opacity="0.72"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#gB)" filter="url(#softFacet)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#gB)" fill-opacity="0.72"/>
+
+<g fill="none" stroke="#0d1117" stroke-width="1.2">
+<polygon points="4,58 126,6 292,4 378,52 378,224 274,310 74,306 28,220"/>
+<line x1="50" y1="122" x2="74" y2="306"/>
+<line x1="264" y1="122" x2="274" y2="310"/>
+<line x1="126" y1="6" x2="142" y2="156"/>
+<line x1="292" y1="4" x2="298" y2="156"/>
+<line x1="378" y1="52" x2="378" y2="224"/>
+<line x1="50" y1="122" x2="264" y2="122"/>
+<line x1="142" y1="156" x2="298" y2="156"/>
+<line x1="74" y1="306" x2="274" y2="310"/>
+<line x1="4" y1="58" x2="50" y2="122"/>
+<line x1="264" y1="122" x2="378" y2="52"/>
+<line x1="28" y1="220" x2="142" y2="156"/>
+<line x1="298" y1="156" x2="378" y2="224"/>
+</g>
+</svg>

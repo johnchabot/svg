@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="385" height="315" viewBox="0 0 385 315">
+<defs>
+<pattern id="checker" width="24" height="24" patternUnits="userSpaceOnUse">
+<rect width="24" height="24" fill="#d8d8d8"/>
+<rect width="12" height="12" fill="#efefef"/>
+<rect x="12" y="12" width="12" height="12" fill="#efefef"/>
+</pattern>
+
+<filter id="soft"><feGaussianBlur stdDeviation="0.25"/></filter>
+
+<radialGradient id="side" cx="50%" cy="42%" r="85%">
+ <stop offset="0%" stop-color="#314E73" stop-opacity=".48"/>
+ <stop offset="100%" stop-color="#00204D" stop-opacity=".42"/>
+</radialGradient>
+
+<radialGradient id="top" cx="50%" cy="42%" r="85%">
+ <stop offset="0%" stop-color="#5B7588" stop-opacity=".48"/>
+ <stop offset="100%" stop-color="#314E73" stop-opacity=".42"/>
+</radialGradient>
+</defs>
+
+<rect width="100%" height="100%" fill="url(#checker)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#side)"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#side)"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#side)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#side)"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#side)"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#side)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#side)" filter="url(#soft)"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#side)"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#top)" filter="url(#soft)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#top)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="none" stroke="#0b1833" stroke-opacity="0.12" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="none" stroke="#314E73" stroke-opacity="0.08" stroke-width="2" stroke-linejoin="round"/>
+
+<g fill="none" stroke="#404040" stroke-opacity="0.22" stroke-width="0.75">
+<polygon points="4,58 126,6 292,4 378,52 378,224 274,310 74,306 28,220"/>
+<line x1="50" y1="122" x2="74" y2="306"/>
+<line x1="264" y1="122" x2="274" y2="310"/>
+<line x1="126" y1="6" x2="142" y2="156"/>
+<line x1="292" y1="4" x2="298" y2="156"/>
+<line x1="378" y1="52" x2="378" y2="224"/>
+<line x1="50" y1="122" x2="264" y2="122"/>
+<line x1="142" y1="156" x2="298" y2="156"/>
+<line x1="74" y1="306" x2="274" y2="310"/>
+<line x1="4" y1="58" x2="50" y2="122"/>
+<line x1="264" y1="122" x2="378" y2="52"/>
+<line x1="28" y1="220" x2="142" y2="156"/>
+<line x1="298" y1="156" x2="378" y2="224"/>
+</g>
+</svg>
