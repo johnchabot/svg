@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='360' viewBox='0 0 900 360'>
+<defs>
+<pattern id='checker' width='20' height='20' patternUnits='userSpaceOnUse'><rect width='20' height='20' fill='#d8d8d8'/><rect width='10' height='10' fill='#efefef'/><rect x='10' y='10' width='10' height='10' fill='#efefef'/></pattern>
+<filter id='blur12'><feGaussianBlur stdDeviation='12'/></filter>
+<clipPath id='hex'><polygon points='120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100'/></clipPath>
+<style>text{font:16px Arial}.t{fill:#314E73;fill-opacity:.28}.e{fill:none;stroke:#314E73;stroke-opacity:.22;stroke-width:2}</style>
+</defs>
+<rect width='900' height='360' fill='url(#checker)'/>
+<text x='80' y='22'>A. Transparent tint only</text>
+<g transform='translate(20,20)'>
+<polygon class='t' points='120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100'/>
+<polygon class='e' points='120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100'/>
+</g>
+<text x='500' y='22'>B. Blurred background + tint</text>
+<g transform='translate(440,20)'>
+<g clip-path='url(#hex)'>
+<rect x='0' y='0' width='360' height='340' fill='url(#checker)' filter='url(#blur12)'/>
+</g>
+<polygon class='t' points='120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100'/>
+<polygon class='e' points='120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100'/>
+</g>
+</svg>

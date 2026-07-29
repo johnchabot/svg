@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="385" height="315" viewBox="0 0 385 315">
+<defs><pattern id="chk" width="24" height="24" patternUnits="userSpaceOnUse">
+<rect width="24" height="24" fill="#d8d8d8"/><rect width="12" height="12" fill="#efefef"/><rect x="12" y="12" width="12" height="12" fill="#efefef"/>
+</pattern></defs>
+<rect width="100%" height="100%" fill="url(#chk)"/>
+
+<polygon points="50,122 264,122 274,310 74,306" fill="#a8ffff" fill-opacity="0.45" stroke="#00d5d8" stroke-width="2"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="#b7d8ff" fill-opacity="0.45" stroke="#006dff" stroke-width="2"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="#cfe3ff" fill-opacity="0.45" stroke="#004cff" stroke-width="2"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="#ffb3d1" fill-opacity="0.45" stroke="#ff3b7f" stroke-width="2"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="#ddd0ff" fill-opacity="0.45" stroke="#6b3dff" stroke-width="2"/>
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="#e8ecff" fill-opacity="0.45" stroke="#666666" stroke-width="2"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="#b8ffff" fill-opacity="0.45" stroke="#00a0a8" stroke-width="2"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="#ffe2a6" fill-opacity="0.45" stroke="#d18a00" stroke-width="2"/>
+</svg>

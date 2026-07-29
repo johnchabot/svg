@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560">
+<defs>
+<style>
+.bgText{font:72px Arial;fill:#353535}
+.hidden{fill:none;stroke:#8ca4bf;stroke-dasharray:5 4;stroke-width:1;opacity:.32}
+.facet{
+  stroke:rgba(255,255,255,.42);
+  stroke-width:1.4;
+  filter:url(#glass);
+}
+</style>
+
+<filter id="glass" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="2.2" result="b"/>
+  <feMerge>
+    <feMergeNode in="b"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+<linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#a7d8ff" stop-opacity=".24"/>
+ <stop offset="100%" stop-color="#4d83bc" stop-opacity=".12"/>
+</linearGradient>
+<linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0%" stop-color="#9cd1ff" stop-opacity=".24"/>
+ <stop offset="100%" stop-color="#4872ae" stop-opacity=".12"/>
+</linearGradient>
+<linearGradient id="gC" x1="1" y1="0" x2="0" y2="1">
+ <stop offset="0%" stop-color="#8fc8ff" stop-opacity=".24"/>
+ <stop offset="100%" stop-color="#3f6aa8" stop-opacity=".12"/>
+</linearGradient>
+</defs>
+
+<rect width="720" height="560" fill="#f5f5f5"/>
+<line x1="0" y1="0" x2="720" y2="560" stroke="#bcbcbc" stroke-width="2"/>
+<line x1="720" y1="0" x2="0" y2="560" stroke="#d7d7d7"/>
+<circle cx="355" cy="175" r="38" fill="#f59e0b"/>
+<circle cx="388" cy="295" r="44" fill="#14b8a6"/>
+<circle cx="315" cy="330" r="26" fill="#ef4444"/>
+<polyline points="60,445 210,365 360,440 520,360 680,430"
+ fill="none" stroke="#7c3aed" stroke-width="5"/>
+<text x="205" y="270" class="bgText">Glass</text>
+
+<!-- hidden construction -->
+<path class="hidden" d="M360 110 L305 142 L305 382"/>
+<path class="hidden" d="M360 110 L415 142 L415 382"/>
+
+<!-- back-to-front draw order -->
+<polygon class="facet" fill="url(#gC)"
+ points="360,110 415,142 415,382 360,414"/>
+<polygon class="facet" fill="url(#gB)"
+ points="305,142 360,110 360,414 305,382"/>
+<polygon class="facet" fill="url(#gA)"
+ points="305,142 360,110 415,142 360,174"/>
+
+<!-- visible outlines -->
+<polygon fill="none" stroke="rgba(255,255,255,.46)" stroke-width="1.4"
+ points="360,110 415,142 415,382 360,414"/>
+<polygon fill="none" stroke="rgba(255,255,255,.46)" stroke-width="1.4"
+ points="305,142 360,110 360,414 305,382"/>
+<polygon fill="none" stroke="rgba(255,255,255,.46)" stroke-width="1.4"
+ points="305,142 360,110 415,142 360,174"/>
+
+</svg>

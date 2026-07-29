@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <filter id="heavy-gem-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="18" result="blur"></feGaussianBlur>
+      <feOffset dx="15" dy="40" result="offsetBlur"></feOffset>
+      <feComponentTransfer in="offsetBlur" result="darkShadow">
+        <feFuncA type="linear" slope="0.55"></feFuncA>
+      </feComponentTransfer>
+      <feFlood flood-color="#4a90e2" flood-opacity="0.2" result="colorFlood"></feFlood>
+      <feComposite operator="in" in="colorFlood" in2="blur" result="coloredShadow"></feComposite>
+      <feOffset dx="8" dy="32" in="coloredShadow" result="offsetColor"></feOffset>
+      <feMerge>
+        <feMergeNode in="darkShadow"></feMergeNode>
+        <feMergeNode in="offsetColor"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="gem-density" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.001 0.08" numOctaves="1" result="noise"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="bent"></feDisplacementMap>
+      <feMorphology operator="erode" radius="2" in="SourceGraphic" result="eroded"></feMorphology>
+      <feColorMatrix type="matrix" values="1 0 0 0 1  0 1 0 0 1  0 0 1 0 1  0 0 0 0.4 0" in="edgeMask" result="brightEdges"></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="bent"></feMergeNode>
+        <feMergeNode in="brightEdges"></feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="anti-banding-satin" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.99" numOctaves="4" result="rawGrain"></feTurbulence>
+      <feGaussianBlur in="rawGrain" stdDeviation="0.8" result="smoothGrain"></feGaussianBlur>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0" in="smoothGrain" result="monoGrain"></feColorMatrix>
+      <feComposite operator="in" in="monoGrain" in2="SourceGraphic" result="grainedSurface"></feComposite>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+        <feMergeNode in="grainedSurface"></feMergeNode>
+      </feMerge>
+    </filter>
+
+
+    <linearGradient id="iridescent-sheen" x1="0.1" y1="0.1" x2="0.9" y2="0.8">
+      <stop offset="0%" stop-color="#ffe9a3" stop-opacity="0.4"></stop>
+      <stop offset="25%" stop-color="#ff96e3" stop-opacity="0.3"></stop>
+      <stop offset="55%" stop-color="#6df5ff" stop-opacity="0.35"></stop>
+      <stop offset="80%" stop-color="#9368ff" stop-opacity="0.25"></stop>
+      <stop offset="100%" stop-color="#1c3d66" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="heavy-light-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#80b3ed" stop-opacity="0.4"></stop>
+      <stop offset="100%" stop-color="#1b3b64" stop-opacity="0.1"></stop>
+    </linearGradient>
+    <linearGradient id="heavy-light-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#214775" stop-opacity="0.4"></stop>
+      <stop offset="100%" stop-color="#0a182a" stop-opacity="0.75"></stop>
+    </linearGradient>
+    <linearGradient id="heavy-light-right" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2c67ad" stop-opacity="0.4"></stop>
+      <stop offset="100%" stop-color="#071322" stop-opacity="0.75"></stop>
+    </linearGradient>
+    <linearGradient id="edge-fade-vertical" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"></stop>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15"></stop>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="edge-fade-horizon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"></stop>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.55"></stop>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.1"></stop>
+    </linearGradient>
+    <pattern id="background-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d222e" stroke-width="1"></path>
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#141822" stroke-width="0.5"></path>
+    </pattern>
+  
+<linearGradient id="facetTopIri" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffe9a3" stop-opacity="0.30"/>
+<stop offset="45%" stop-color="#6df5ff" stop-opacity="0.25"/>
+<stop offset="100%" stop-color="#9368ff" stop-opacity="0.12"/>
+</linearGradient>
+<linearGradient id="facetLeftIri" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#6df5ff" stop-opacity="0.18"/>
+<stop offset="100%" stop-color="#9368ff" stop-opacity="0.10"/>
+</linearGradient>
+<linearGradient id="facetFrontIri" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#ff96e3" stop-opacity="0.18"/>
+<stop offset="50%" stop-color="#ffe9a3" stop-opacity="0.16"/>
+<stop offset="100%" stop-color="#6df5ff" stop-opacity="0.18"/>
+</linearGradient>
+<linearGradient id="facetRightIri" x1="100%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#6df5ff" stop-opacity="0.18"/>
+<stop offset="100%" stop-color="#ff96e3" stop-opacity="0.10"/>
+</linearGradient>
+
+</defs>
+  <rect width="100%" height="100%" fill="#090a0d"></rect>
+  <rect width="100%" height="100%" fill="url(#background-grid)"></rect>
+  <g filter="url(#heavy-gem-shadow)">
+    <g filter="url(#gem-density)">
+      <polygon points="15,90 170,10 170,240 15,320" fill="#152b44" opacity="0.25"></polygon>
+      <polygon points="170,10 330,10 330,240 170,240" fill="#1c3b5e" opacity="0.3"></polygon>
+      <polygon points="330,10 485,90 485,320 330,240" fill="#224873" opacity="0.25"></polygon>
+      <polygon points="95,470 15,320 170,240 330,240 485,320 405,470" fill="#0b1726" opacity="0.2"></polygon>
+      <line x1="170" y1="10" x2="170" y2="240" stroke="#a0c8f0" stroke-width="1.2" opacity="0.25"></line>
+      <line x1="330" y1="10" x2="330" y2="240" stroke="#a0c8f0" stroke-width="1.2" opacity="0.25"></line>
+    </g>
+    <g>
+      <polygon points="95,190 15,90 170,10 330,10 485,90 405,190" fill="url(#heavy-light-top)" filter="url(#anti-banding-satin)"></polygon>
+      <polygon points="15,90 95,190 95,470 15,320" fill="url(#heavy-light-left)" filter="url(#anti-banding-satin)"></polygon>
+      <polygon points="95,190 405,190 405,470 95,470" fill="url(#heavy-light-left)" filter="url(#anti-banding-satin)"></polygon>
+      <polygon points="405,190 485,90 485,320 405,470" fill="url(#heavy-light-right)" filter="url(#anti-banding-satin)"></polygon>
+    </g>
+
+<g id="density-pass" style="mix-blend-mode:multiply" opacity="0.55">
+  <polygon points="95,190 15,90 170,10 330,10 485,90 405,190" fill="url(#densityBlue)"/>
+  <polygon points="15,90 95,190 95,470 15,320" fill="url(#densityBlue)"/>
+  <polygon points="95,190 405,190 405,470 95,470" fill="url(#densityBlue)"/>
+  <polygon points="405,190 485,90 485,320 405,470" fill="url(#densityBlue)"/>
+</g>
+
+
+
+    <g style="mix-blend-mode:screen">
+<polygon points="95,190 15,90 170,10 330,10 485,90 405,190" fill="url(#facetTopIri)"/>
+<polygon points="15,90 95,190 95,470 15,320" fill="url(#facetLeftIri)"/>
+<polygon points="95,190 405,190 405,470 95,470" fill="url(#facetFrontIri)"/>
+<polygon points="405,190 485,90 485,320 405,470" fill="url(#facetRightIri)"/>
+</g>
+    <polyline points="15,90 170,10 330,10 485,90" fill="none" stroke="url(#edge-fade-horizon)" stroke-width="1"></polyline>
+    <polyline points="15,90 95,190 405,190 485,90" fill="none" stroke="url(#edge-fade-horizon)" stroke-width="1.2"></polyline>
+    <line x1="95" y1="190" x2="95" y2="470" stroke="url(#edge-fade-vertical)" stroke-width="1.2"></line>
+    <line x1="405" y1="190" x2="405" y2="470" stroke="url(#edge-fade-vertical)" stroke-width="1.2"></line>
+    <polyline points="15,320 95,470 405,470 485,320" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.08"></polyline>
+  </g>
+</svg>

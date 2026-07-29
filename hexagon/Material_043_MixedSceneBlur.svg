@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420">
+<defs>
+<clipPath id="hex">
+<polygon points="120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100"/>
+</clipPath>
+
+<filter id="blur12" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="12"/>
+</filter>
+
+<style>
+text{font:16px Arial;fill:#222}
+.edge{fill:none;stroke:#66798f;stroke-width:2;stroke-opacity:.35}
+.small{font:12px Arial;fill:#444}
+</style>
+</defs>
+
+<!-- Left background -->
+<g id="sceneL" transform="translate(20,40)">
+  <rect width="360" height="320" fill="#f4f4f4"/>
+  <line x1="0" y1="0" x2="360" y2="320" stroke="#999" stroke-width="2"/>
+  <line x1="360" y1="0" x2="0" y2="320" stroke="#bbb" stroke-width="1"/>
+  <circle cx="70" cy="80" r="28" fill="#e85d5d"/>
+  <circle cx="275" cy="90" r="36" fill="#4f8ee8"/>
+  <circle cx="210" cy="235" r="42" fill="#67b567"/>
+  <rect x="25" y="245" width="90" height="38" fill="#f0c14b"/>
+  <text x="145" y="160" font-size="34" font-family="Arial" fill="#333">SVG</text>
+  <polyline points="20,180 90,130 160,210 240,140 330,180" fill="none" stroke="#7a59c5" stroke-width="4"/>
+</g>
+
+<!-- Right background -->
+<g id="sceneR" transform="translate(500,40)">
+  <rect width="360" height="320" fill="#f4f4f4"/>
+  <line x1="0" y1="0" x2="360" y2="320" stroke="#999" stroke-width="2"/>
+  <line x1="360" y1="0" x2="0" y2="320" stroke="#bbb" stroke-width="1"/>
+  <circle cx="70" cy="80" r="28" fill="#e85d5d"/>
+  <circle cx="275" cy="90" r="36" fill="#4f8ee8"/>
+  <circle cx="210" cy="235" r="42" fill="#67b567"/>
+  <rect x="25" y="245" width="90" height="38" fill="#f0c14b"/>
+  <text x="145" y="160" font-size="34" font-family="Arial" fill="#333">SVG</text>
+  <polyline points="20,180 90,130 160,210 240,140 330,180" fill="none" stroke="#7a59c5" stroke-width="4"/>
+</g>
+
+<text x="90" y="24">A. Original scene</text>
+<g transform="translate(20,40)">
+ <g clip-path="url(#hex)">
+   <use href="#sceneL" transform="translate(-20,-40)"/>
+ </g>
+ <polygon class="edge" points="120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100"/>
+</g>
+
+<text x="560" y="24">B. Blurred scene</text>
+<g transform="translate(500,40)">
+ <g clip-path="url(#hex)">
+   <g filter="url(#blur12)">
+     <use href="#sceneR" transform="translate(-500,-40)"/>
+   </g>
+ </g>
+ <polygon class="edge" points="120,40 240,40 310,100 310,240 240,300 120,300 50,240 50,100"/>
+</g>
+
+</svg>

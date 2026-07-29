@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+<defs>
+<filter id="glass" x="-40%" y="-40%" width="180%" height="180%">
+<feGaussianBlur stdDeviation="8" result="b"/>
+<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<style>
+.lbl{font:15px Arial;font-weight:bold;fill:#222}
+.f{fill:rgba(90,150,255,.22);stroke:rgba(90,150,255,.45);stroke-width:1.5;filter:url(#glass)}
+</style>
+</defs>
+
+<rect width="1200" height="420" fill="#f4f4f4"/>
+<line x1="0" y1="0" x2="1200" y2="420" stroke="#999" stroke-width="2"/>
+<line x1="1200" y1="0" x2="0" y2="420" stroke="#bbb" stroke-width="1"/>
+<circle cx="90" cy="70" r="22" fill="#e55"/>
+<circle cx="260" cy="110" r="28" fill="#58f"/>
+<circle cx="520" cy="210" r="34" fill="#6b6"/>
+<circle cx="760" cy="90" r="26" fill="#f59e0b"/>
+<circle cx="1040" cy="220" r="30" fill="#14b8a6"/>
+<polyline points="30,300 180,200 320,320 520,180 760,310 1120,220"
+ fill="none" stroke="#7c3aed" stroke-width="4"/>
+<text x="430" y="120" font-size="34" font-family="Arial" fill="#333">Transmission Test</text>
+
+
+<text class="lbl" x="70" y="24">A. Single</text>
+<g transform="translate(0,40)">
+<polygon class="f" points="100,60 220,60 260,160 140,160"/>
+</g>
+
+<text class="lbl" x="340" y="24">B. No overlap</text>
+<g transform="translate(280,40)">
+<polygon class="f" points="100,60 220,60 260,160 140,160"/>
+<g transform="translate(170,0)"><polygon class="f" points="100,60 220,60 260,160 140,160"/></g>
+</g>
+
+<text class="lbl" x="660" y="24">C. Partial overlap</text>
+<g transform="translate(600,40)">
+<polygon class="f" points="100,60 220,60 260,160 140,160"/>
+<g transform="translate(70,35)"><polygon class="f" points="100,60 220,60 260,160 140,160"/></g>
+</g>
+
+<text class="lbl" x="980" y="24">D. Full overlap</text>
+<g transform="translate(920,40)">
+<polygon class="f" points="100,60 220,60 260,160 140,160"/>
+<polygon class="f" points="100,60 220,60 260,160 140,160"/>
+</g>
+</svg>

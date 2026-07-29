@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+<defs>
+<filter id="glass" x="-40%" y="-40%" width="180%" height="180%">
+ <feGaussianBlur stdDeviation="8" result="b"/>
+ <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<style>
+text.title{font:18px Arial;font-weight:bold;fill:#222}
+.glass{fill:rgba(90,150,255,.20);stroke:rgba(90,150,255,.45);stroke-width:2;filter:url(#glass)}
+</style>
+</defs>
+
+
+<rect width="900" height="360" fill="#f5f5f5"/>
+<line x1="0" y1="20" x2="900" y2="340" stroke="#9a9a9a" stroke-width="2"/>
+<line x1="900" y1="0" x2="0" y2="360" stroke="#c0c0c0" stroke-width="1"/>
+<circle cx="290" cy="120" r="38" fill="#f59e0b"/>
+<circle cx="640" cy="255" r="42" fill="#14b8a6"/>
+<polyline points="20,330 180,240 330,330 520,230 820,300"
+ fill="none" stroke="#7c3aed" stroke-width="6"/>
+<text x="170" y="185" font-size="64" font-family="Arial" fill="#333">Transmission</text>
+
+<text class="title" x="20" y="28">Partial overlap positioned over text, line and circle</text>
+
+<polygon class="glass" points="220,80 360,80 400,220 260,220"/>
+<g transform="translate(70,40)">
+  <polygon class="glass" points="220,80 360,80 400,220 260,220"/>
+</g>
+
+</svg>

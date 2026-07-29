@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<svg viewBox="0 0 500 500" width="100%" height="100%" xmlns="http://w3.org">
+  <defs>
+    <!-- Define the blur filter -->
+    <filter id="cube-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <!-- SourceAlpha captures the entire boundary of the cube group for the shadow -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur" />
+      <feOffset dx="0" dy="25" result="offsetBlur" />
+      
+      <!-- Blend the shadow with the background color slightly -->
+      <feComponentTransfer in="offsetBlur" result="shadow">
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background for high contrast visual depth -->
+  <rect width="100%" height="100%" fill="#1a1c23" />
+
+  <!-- The Translucent Cube Container -->
+  <g filter="url(#cube-blur)">
+    
+    <!-- === BACK FACETS (Rendered first so they sit behind) === -->
+    <!-- Back Bottom Face -->
+    <polygon points="250,320 150,270 250,220 350,270" fill="#204060" opacity="0.4" />
+    <!-- Back Left Face -->
+    <polygon points="150,150 250,100 250,220 150,270" fill="#183048" opacity="0.3" />
+    <!-- Back Right Face -->
+    <polygon points="350,150 250,100 250,220 350,270" fill="#1c3855" opacity="0.3" />
+
+    <!-- === FRONT FACETS (Rendered last with low opacity for translucency) === -->
+    <!-- Top Face -->
+    <polygon points="250,100 350,150 250,200 150,150" fill="#4a90e2" opacity="0.5" />
+    <!-- Front Left Face -->
+    <polygon points="150,150 250,200 250,320 150,270" fill="#2c5a91" opacity="0.55" />
+    <!-- Front Right Face -->
+    <polygon points="250,200 350,150 350,270 250,320" fill="#3578c4" opacity="0.6" />
+
+    <!-- Optional: Inner Wireframe Accents to make corners pop -->
+    <polyline points="250,100 250,220 150,270" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" />
+    <polyline points="250,220 350,270" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" />
+  </g>
+</svg>

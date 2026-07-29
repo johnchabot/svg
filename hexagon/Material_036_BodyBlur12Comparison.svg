@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380">
+<defs>
+  <pattern id="checker" width="20" height="20" patternUnits="userSpaceOnUse">
+    <rect width="20" height="20" fill="#d8d8d8"/>
+    <rect width="10" height="10" fill="#efefef"/>
+    <rect x="10" y="10" width="10" height="10" fill="#efefef"/>
+  </pattern>
+
+  <linearGradient id="body" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#314E73" stop-opacity="0.54"/>
+    <stop offset="100%" stop-color="#314E73" stop-opacity="0.52"/>
+  </linearGradient>
+
+  <filter id="blur12">
+    <feGaussianBlur stdDeviation="12"/>
+  </filter>
+
+  <style>
+    text { font:16px Arial; fill:#222; }
+    .edge { fill:none; stroke:#314E73; stroke-opacity:.22; stroke-width:2; }
+    .outline { fill:none; stroke:#444; stroke-opacity:.14; stroke-width:.55; }
+  </style>
+</defs>
+
+<rect width="100%" height="100%" fill="url(#checker)"/>
+
+<text x="120" y="24">No body blur</text>
+<polygon points="170,40 290,40 360,100 360,250 290,320 170,320 100,250 100,100" fill="url(#body)"/>
+<polygon class="edge" points="170,40 290,40 360,100 360,250 290,320 170,320 100,250 100,100"/>
+<polygon class="outline" points="170,40 290,40 360,100 360,250 290,320 170,320 100,250 100,100"/>
+
+<g transform="translate(420,0)">
+  <text x="95" y="24">12 px body blur only</text>
+  <polygon points="170,40 290,40 360,100 360,250 290,320 170,320 100,250 100,100" fill="url(#body)" filter="url(#blur12)"/>
+  <polygon class="edge" points="170,40 290,40 360,100 360,250 290,320 170,320 100,250 100,100"/>
+  <polygon class="outline" points="170,40 290,40 360,100 360,250 290,320 170,320 100,250 100,100"/>
+</g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520">
+<defs>
+  <filter id="facetGlassRear" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="1.8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="facetGlassFront" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="2.8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <linearGradient id="topGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#bfe3ff" stop-opacity=".34"/>
+    <stop offset="100%" stop-color="#5e93c8" stop-opacity=".18"/>
+  </linearGradient>
+  <linearGradient id="leftGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#8fc8ff" stop-opacity=".18"/>
+    <stop offset="100%" stop-color="#4b74b5" stop-opacity=".10"/>
+  </linearGradient>
+  <linearGradient id="rightGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#79b6ff" stop-opacity=".18"/>
+    <stop offset="100%" stop-color="#3965a8" stop-opacity=".10"/>
+  </linearGradient>
+
+  <style>
+    .bgtext{font:64px Arial;fill:#3a3a3a}
+    .hidden{fill:none;stroke:#8aa4c0;stroke-width:1;stroke-dasharray:5 4;opacity:.28}
+    .rear{stroke:rgba(255,255,255,.18);stroke-width:1.0}
+    .front{stroke:rgba(255,255,255,.55);stroke-width:1.6}
+  </style>
+</defs>
+
+<rect width="700" height="520" fill="#f4f4f4"/>
+<line x1="0" y1="0" x2="700" y2="520" stroke="#b7b7b7" stroke-width="2"/>
+<line x1="700" y1="0" x2="0" y2="520" stroke="#d0d0d0"/>
+
+<circle cx="335" cy="170" r="42" fill="#f59e0b"/>
+<circle cx="375" cy="255" r="46" fill="#14b8a6"/>
+<circle cx="320" cy="295" r="26" fill="#ef4444"/>
+<polyline points="70,390 220,330 350,410 470,330 640,390"
+ fill="none" stroke="#7c3aed" stroke-width="5"/>
+<text x="210" y="250" class="bgtext">Glass</text>
+
+<path class="hidden" d="M350 95 L300 125 L300 295"/>
+<path class="hidden" d="M350 95 L400 125 L400 295"/>
+
+<!-- Rear facets -->
+<polygon filter="url(#facetGlassRear)" class="rear"
+ points="350,95 400,125 400,295 350,325" fill="url(#rightGrad)"/>
+<polygon filter="url(#facetGlassRear)" class="rear"
+ points="300,125 350,95 350,325 300,295" fill="url(#leftGrad)"/>
+
+<!-- Front/top facet -->
+<polygon filter="url(#facetGlassFront)" class="front"
+ points="300,125 350,95 400,125 350,155" fill="url(#topGrad)"/>
+
+</svg>

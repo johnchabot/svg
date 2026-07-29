@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+<style>
+text { font:16px Arial; fill:#222; }
+.box {
+  fill: rgb(80 120 180 / 35%);
+  stroke: #315070;
+  stroke-width: 2;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.facet {
+  fill: rgb(80 120 180 / 35%);
+  stroke: #315070;
+  stroke-width: 2;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+</style>
+
+<defs>
+<pattern id="checker" width="20" height="20" patternUnits="userSpaceOnUse">
+  <rect width="20" height="20" fill="#d8d8d8"/>
+  <rect width="10" height="10" fill="#efefef"/>
+  <rect x="10" y="10" width="10" height="10" fill="#efefef"/>
+</pattern>
+</defs>
+
+<rect width="1200" height="360" fill="url(#checker)"/>
+
+<text x="55" y="30">A. Rectangle</text>
+<rect class="box" x="40" y="50" width="220" height="220" rx="20"/>
+
+<text x="445" y="30">B. Single prism facet</text>
+<polygon class="facet"
+points="430,220 544,156 700,156 780,224 676,310 476,306"/>
+
+<text x="830" y="30">C. Whole prism</text>
+
+<g style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+<polygon class="facet" points="808,240 922,176 1078,176 1158,244 1054,330 854,326"/>
+<polygon class="facet" points="784,78 830,142 854,326 808,240"/>
+<polygon class="facet" points="830,142 1044,142 1054,330 854,326"/>
+<polygon class="facet" points="1044,142 1158,72 1158,244 1054,330"/>
+<polygon class="facet" points="784,78 906,26 922,176 808,240"/>
+<polygon class="facet" points="906,26 1072,24 1078,176 922,176"/>
+<polygon class="facet" points="1072,24 1158,72 1158,244 1078,176"/>
+<polygon class="facet" points="784,78 906,26 1072,24 1158,72 1044,142 830,142"/>
+</g>
+
+</svg>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="385" height="315" viewBox="0 0 385 315">
+
+<defs>
+<pattern id="checker" width="24" height="24" patternUnits="userSpaceOnUse">
+  <rect width="24" height="24" fill="#d8d8d8"/>
+  <rect width="12" height="12" fill="#efefef"/>
+  <rect x="12" y="12" width="12" height="12" fill="#efefef"/>
+</pattern>
+
+<!-- Shared thickness profile -->
+<linearGradient id="thickness" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#000" stop-opacity="0.12"/>
+  <stop offset="18%" stop-color="#fff" stop-opacity="0.03"/>
+  <stop offset="50%" stop-color="#fff" stop-opacity="0.08"/>
+  <stop offset="82%" stop-color="#000" stop-opacity="0.10"/>
+  <stop offset="100%" stop-color="#000" stop-opacity="0.14"/>
+</linearGradient>
+
+<linearGradient id="adular" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="42%" stop-color="#dff4ff" stop-opacity="0.10"/>
+  <stop offset="50%" stop-color="#fff" stop-opacity="0.24"/>
+  <stop offset="58%" stop-color="#d8f1ff" stop-opacity="0.10"/>
+  <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+
+<!-- Richer glass -->
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#d7ecff" stop-opacity="0.28"/>
+ <stop offset="100%" stop-color="#428cff" stop-opacity="0.52"/>
+</linearGradient>
+<linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#e5ffff" stop-opacity="0.28"/>
+ <stop offset="100%" stop-color="#37dce8" stop-opacity="0.52"/>
+</linearGradient>
+<linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#f2ebff" stop-opacity="0.28"/>
+ <stop offset="100%" stop-color="#8667ff" stop-opacity="0.52"/>
+</linearGradient>
+<linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#ffeaf5" stop-opacity="0.28"/>
+ <stop offset="100%" stop-color="#ff78b6" stop-opacity="0.50"/>
+</linearGradient>
+<linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#fff5dc" stop-opacity="0.28"/>
+ <stop offset="100%" stop-color="#ffb04d" stop-opacity="0.52"/>
+</linearGradient>
+<linearGradient id="pale" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0%" stop-color="#fbfcff" stop-opacity="0.22"/>
+ <stop offset="100%" stop-color="#d6dcff" stop-opacity="0.42"/>
+</linearGradient>
+</defs>
+
+<rect width="100%" height="100%" fill="url(#checker)"/>
+
+<!-- helper: each facet = glass + thickness -->
+<g stroke="none">
+<g id="facet-blue">
+ <polygon points="4,58 126,6 142,156 28,220" fill="url(#blue)"/>
+ <polygon points="4,58 126,6 142,156 28,220" fill="url(#thickness)"/>
+</g>
+<g id="facet-cyan">
+ <polygon points="126,6 292,4 298,156 142,156" fill="url(#cyan)"/>
+ <polygon points="126,6 292,4 298,156 142,156" fill="url(#thickness)"/>
+</g>
+<g id="facet-violet">
+ <polygon points="292,4 378,52 378,224 298,156" fill="url(#violet)"/>
+ <polygon points="292,4 378,52 378,224 298,156" fill="url(#thickness)"/>
+</g>
+<g id="facet-pink">
+ <polygon points="4,58 50,122 74,306 28,220" fill="url(#pink)"/>
+ <polygon points="4,58 50,122 74,306 28,220" fill="url(#thickness)"/>
+</g>
+<g id="facet-cyan2">
+ <polygon points="50,122 264,122 274,310 74,306" fill="url(#cyan)"/>
+ <polygon points="50,122 264,122 274,310 74,306" fill="url(#thickness)"/>
+</g>
+<g id="facet-amber">
+ <polygon points="264,122 378,52 378,224 274,310" fill="url(#amber)"/>
+ <polygon points="264,122 378,52 378,224 274,310" fill="url(#thickness)"/>
+</g>
+<g id="facet-pale">
+ <polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#pale)"/>
+ <polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#thickness)"/>
+</g>
+<g id="facet-top">
+ <polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#blue)"/>
+ <polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#adular)"/>
+ <polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#thickness)"/>
+</g>
+</g>
+
+<use href="#facet-pale"/>
+<use href="#facet-pink"/>
+<use href="#facet-cyan2"/>
+<use href="#facet-amber"/>
+<use href="#facet-blue"/>
+<use href="#facet-cyan"/>
+<use href="#facet-violet"/>
+<use href="#facet-top"/>
+
+<g fill="none" stroke="#111" stroke-width="1">
+<polygon points="4,58 126,6 292,4 378,52 378,224 274,310 74,306 28,220"/>
+<polyline points="126,6 142,156 298,156"/>
+<polyline points="50,122 264,122"/>
+<line x1="28" y1="220" x2="142" y2="156"/>
+<line x1="298" y1="156" x2="378" y2="224"/>
+<line x1="74" y1="306" x2="274" y2="310"/>
+<line x1="50" y1="122" x2="4" y2="58"/>
+<line x1="264" y1="122" x2="378" y2="52"/>
+<line x1="142" y1="156" x2="142" y2="156"/>
+</g>
+
+</svg>

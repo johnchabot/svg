@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520">
+<defs>
+  <filter id="facetGlass" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="2.5" result="b"/>
+    <feMerge>
+      <feMergeNode in="b"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <linearGradient id="topGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#a8d7ff" stop-opacity=".28"/>
+    <stop offset="100%" stop-color="#5e93c8" stop-opacity=".14"/>
+  </linearGradient>
+
+  <linearGradient id="leftGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#8fc8ff" stop-opacity=".24"/>
+    <stop offset="100%" stop-color="#4b74b5" stop-opacity=".16"/>
+  </linearGradient>
+
+  <linearGradient id="rightGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#79b6ff" stop-opacity=".22"/>
+    <stop offset="100%" stop-color="#3965a8" stop-opacity=".15"/>
+  </linearGradient>
+
+  <style>
+    .bgtext{font:64px Arial;fill:#3a3a3a}
+    .edge{fill:none;stroke:rgba(255,255,255,.45);stroke-width:1.4}
+    .hidden{fill:none;stroke:#8aa4c0;stroke-width:1;stroke-dasharray:5 4;opacity:.35}
+    .facet{filter:url(#facetGlass)}
+  </style>
+</defs>
+
+<rect width="700" height="520" fill="#f4f4f4"/>
+<line x1="0" y1="0" x2="700" y2="520" stroke="#b7b7b7" stroke-width="2"/>
+<line x1="700" y1="0" x2="0" y2="520" stroke="#d0d0d0"/>
+<circle cx="145" cy="120" r="34" fill="#f59e0b"/>
+<circle cx="560" cy="355" r="42" fill="#14b8a6"/>
+<polyline points="20,420 180,330 320,410 500,320 680,395" fill="none" stroke="#7c3aed" stroke-width="5"/>
+<text x="145" y="260" class="bgtext">Glass</text>
+
+<!-- back hidden edges -->
+<path class="hidden" d="M350 95 L300 125 L300 295"/>
+<path class="hidden" d="M350 95 L400 125 L400 295"/>
+
+<!-- back-to-front facet order -->
+<polygon class="facet" points="350,95 400,125 400,295 350,325" fill="url(#rightGrad)"/>
+<polygon class="facet" points="300,125 350,95 350,325 300,295" fill="url(#leftGrad)"/>
+<polygon class="facet" points="300,125 350,95 400,125 350,155" fill="url(#topGrad)"/>
+
+<polygon class="edge" points="350,95 400,125 400,295 350,325"/>
+<polygon class="edge" points="300,125 350,95 350,325 300,295"/>
+<polygon class="edge" points="300,125 350,95 400,125 350,155"/>
+
+</svg>

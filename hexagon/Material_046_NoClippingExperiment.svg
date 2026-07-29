@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420">
+<defs>
+<g id="scene">
+<rect width="420" height="340" fill="#f5f5f5"/>
+<line x1="0" y1="0" x2="420" y2="340" stroke="#999" stroke-width="2"/>
+<line x1="420" y1="0" x2="0" y2="340" stroke="#bbb" stroke-width="1"/>
+<circle cx="70" cy="90" r="28" fill="#e55"/>
+<circle cx="300" cy="75" r="36" fill="#58f"/>
+<circle cx="250" cy="245" r="42" fill="#6b6"/>
+<rect x="35" y="235" width="95" height="42" fill="#f2c24a"/>
+<text x="150" y="165" font-size="34" font-family="Arial" fill="#333">SVG</text>
+<polyline points="20,180 90,130 160,210 250,150 360,185"
+ fill="none" stroke="#75c" stroke-width="4"/>
+</g>
+<filter id="tx" x="-30%" y="-30%" width="160%" height="160%">
+<feGaussianBlur stdDeviation="8"/>
+<feColorMatrix type="saturate" values="1.5"/>
+</filter>
+<linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#8ca7c4" stop-opacity=".24"/>
+<stop offset="100%" stop-color="#5d7d9d" stop-opacity=".08"/>
+</linearGradient>
+<style>
+text{font:16px Arial}
+.edge{fill:none;stroke:#4f6b86;stroke-opacity:.24;stroke-width:1.8}
+.body{fill:url(#body);fill-opacity:.16}
+</style>
+</defs>
+
+<g transform="translate(20,40)">
+<use href="#scene"/>
+</g>
+
+<text x="100" y="24">A. Reference</text>
+<text x="540" y="24">B. Same experiment, no clipping</text>
+
+<g transform="translate(520,40)">
+<use href="#scene"/>
+
+<g filter="url(#tx)">
+  <use href="#scene"/>
+</g>
+<polygon class="body" points="85,70 170,35 170,200 85,165"/>
+<polygon class="edge" points="85,70 170,35 170,200 85,165"/>
+
+<g filter="url(#tx)">
+  <use href="#scene"/>
+</g>
+<polygon class="body" points="170,35 255,70 255,165 170,200"/>
+<polygon class="edge" points="170,35 255,70 255,165 170,200"/>
+
+<g filter="url(#tx)">
+  <use href="#scene"/>
+</g>
+<polygon class="body" points="85,70 255,70 255,165 85,165"/>
+<polygon class="edge" points="85,70 255,70 255,165 85,165"/>
+
+<g filter="url(#tx)">
+  <use href="#scene"/>
+</g>
+<polygon class="body" points="170,35 255,70 255,165 170,200 85,165 85,70"/>
+<polygon class="edge" points="170,35 255,70 255,165 170,200 85,165 85,70"/>
+
+</g>
+</svg>

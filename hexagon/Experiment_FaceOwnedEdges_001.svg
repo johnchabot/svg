@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="385" height="315" viewBox="0 0 385 315">
+<defs>
+<pattern id="checker" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#d8d8d8"/><rect width="12" height="12" fill="#efefef"/><rect x="12" y="12" width="12" height="12" fill="#efefef"/></pattern>
+<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d6ebff" stop-opacity=".4"/><stop offset="100%" stop-color="#418dff" stop-opacity=".6"/></linearGradient>
+<linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e4ffff" stop-opacity=".4"/><stop offset="100%" stop-color="#39dce8" stop-opacity=".6"/></linearGradient>
+<linearGradient id="v" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0ebff" stop-opacity=".4"/><stop offset="100%" stop-color="#8667ff" stop-opacity=".6"/></linearGradient>
+<linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffe9f4" stop-opacity=".4"/><stop offset="100%" stop-color="#ff7bb8" stop-opacity=".6"/></linearGradient>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff3d7" stop-opacity=".4"/><stop offset="100%" stop-color="#ffb24b" stop-opacity=".6"/></linearGradient>
+<linearGradient id="pa" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbfcff" stop-opacity=".3"/><stop offset="100%" stop-color="#d6dcff" stop-opacity=".5"/></linearGradient>
+<linearGradient id="ad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff" stop-opacity="0"/><stop offset="48%" stop-color="#fff" stop-opacity=".18"/><stop offset="52%" stop-color="#d8f1ff" stop-opacity=".1"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="url(#checker)"/>
+<g stroke="#111" stroke-width="1">
+<polygon points="28,220 142,156 298,156 378,224 274,310 74,306" fill="url(#pa)"/>
+<polygon points="4,58 50,122 74,306 28,220" fill="url(#p)"/>
+<polygon points="50,122 264,122 274,310 74,306" fill="url(#c)"/>
+<polygon points="264,122 378,52 378,224 274,310" fill="url(#a)"/>
+<polygon points="4,58 126,6 142,156 28,220" fill="url(#b)"/>
+<polygon points="126,6 292,4 298,156 142,156" fill="url(#c)"/>
+<polygon points="292,4 378,52 378,224 298,156" fill="url(#v)"/>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#b)"/>
+</g>
+<polygon points="4,58 126,6 292,4 378,52 264,122 50,122" fill="url(#ad)" stroke="none"/>
+</svg>
