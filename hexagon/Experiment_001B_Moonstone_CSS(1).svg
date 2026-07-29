@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320">
+<style>
+svg{background:#f6f7f8}.face{stroke:#5b6270;stroke-width:1.1;stroke-linejoin:round}
+.top{fill:url(#topBase)}.front{fill:url(#frontBase)}.right{fill:url(#rightBase)}
+.opticalField{mix-blend-mode:hard-light;opacity:.55}
+.softHighlight{mix-blend-mode:screen;opacity:.22}
+.edge{stroke:rgba(255,255,255,.55);stroke-width:1.4}
+</style>
+<defs>
+<linearGradient id="topBase" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#eef3f8"/><stop offset="100%" stop-color="#d7e0ea"/></linearGradient>
+<linearGradient id="frontBase" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#edf3f8"/><stop offset="100%" stop-color="#bccbdb"/></linearGradient>
+<linearGradient id="rightBase" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#dbe6f1"/><stop offset="100%" stop-color="#a8b8cb"/></linearGradient>
+<radialGradient id="moonField" cx="30%" cy="28%" r="115%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/><stop offset="18%" stop-color="#dbefff" stop-opacity=".80"/><stop offset="42%" stop-color="#bfdcff" stop-opacity=".45"/><stop offset="60%" stop-color="#f7bfd0" stop-opacity=".18"/><stop offset="82%" stop-color="#ffffff" stop-opacity=".04"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<radialGradient id="veil" cx="62%" cy="18%" r="80%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".45"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<polygon class="face top" points="120,60 220,60 270,95 220,130 120,130 70,95"/>
+<polygon class="face front" points="120,130 220,130 220,245 120,245"/>
+<polygon class="face right" points="220,130 270,95 270,210 220,245"/>
+<polygon class="opticalField" fill="url(#moonField)" points="120,130 220,130 220,245 120,245"/>
+<polygon class="softHighlight" fill="url(#veil)" points="120,130 220,130 220,245 120,245"/>
+<line class="edge" x1="120" y1="130" x2="220" y2="130"/>
+<line class="edge" x1="220" y1="130" x2="270" y2="95"/>
+</svg>

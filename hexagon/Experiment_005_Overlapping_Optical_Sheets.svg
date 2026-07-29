@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Hexagonal_Prism" width="385" height="315">
+  <ns0:defs>
+    <ns0:pattern id="checker" width="40" height="40" patternUnits="userSpaceOnUse">
+      <ns0:rect width="40" height="40" fill="#d8d8d8" />
+      <ns0:rect width="20" height="20" fill="#efefef" />
+      <ns0:rect x="20" y="20" width="20" height="20" fill="#efefef" />
+    </ns0:pattern>
+  </ns0:defs>
+  <ns0:rect width="100%" height="100%" fill="url(#checker)" />
+  <ns0:style>
+.facet{fill:#84b8ff;fill-opacity:.18;stroke:#111;stroke-width:1}
+.optical{fill:#84b8ff;fill-opacity:.18;stroke:none}
+</ns0:style>
+  <ns0:g id="top">
+    <ns0:polygon class="optical" points="-1.68,53.84 130.08,-2.32 147.36,159.68 24.24,228.80" />
+    <ns0:polygon fill="#444" opacity="0.75" points="  4,  58  126,   6  142, 156   28, 220" class="facet facet-top" />
+  </ns0:g>
+  <ns0:g id="side-front-left">
+    <ns0:polygon class="optical" points="118.92,0.04 298.20,-2.12 304.68,162.04 136.20,162.04" />
+    <ns0:polygon fill="#666" opacity="0.75" points="126,   6  292,   4  298, 156  142, 156" class="facet facet-side facet-front-left" />
+  </ns0:g>
+  <ns0:g id="side-front">
+    <ns0:polygon class="optical" points="288.44,-4.40 381.32,47.44 381.32,233.20 294.92,159.76" />
+    <ns0:polygon fill="#AAA" opacity="0.75" points="292,   4  378,  52  378, 224  298, 156" class="facet facet-side facet-front" />
+  </ns0:g>
+  <ns0:g id="side-front-right">
+    <ns0:polygon class="optical" points="14.32,219.31 137.44,150.19 305.92,150.19 392.32,223.63 280.00,316.51 64.00,312.19" />
+    <ns0:polygon fill="#888" opacity="0.75" points=" 28, 220  142, 156  298, 156  378, 224  274, 310   74, 306  " class="facet facet-side facet-front-right" />
+  </ns0:g>
+  <ns0:g id="bottom">
+    <ns0:polygon class="optical" points="1.20,48.52 50.88,117.64 76.80,316.36 27.12,223.48" />
+    <ns0:polygon fill="#483" opacity="0.75" points="  4,  58   50, 122   74, 306   28, 220" class="facet facet-bottom" />
+  </ns0:g>
+  <ns0:g id="side-rear-left">
+    <ns0:polygon class="optical" points="40.76,114.56 271.88,114.56 282.68,317.60 66.68,313.28" />
+    <ns0:polygon fill="#362" opacity="0.75" points=" 50, 122  264, 122  274, 310   74, 306" class="facet facet-side facet-rear-left" />
+  </ns0:g>
+  <ns0:g id="side-rear">
+    <ns0:polygon class="optical" points="259.24,117.60 382.36,42.00 382.36,227.76 270.04,320.64" />
+    <ns0:polygon fill="#241" opacity="0.75" points="264, 122  378,  52  378, 224  274, 310" class="facet facet-side facet-rear" />
+  </ns0:g>
+  <ns0:g id="side-rear-right">
+    <ns0:polygon class="optical" points="-10.53,57.79 121.23,1.63 300.51,-0.53 393.39,51.31 270.27,126.91 39.15,126.91" />
+    <ns0:polygon fill="#5A4" opacity="0.75" points="  4,  58  126,   6  292,   4  378,  52  264, 122   50, 122" class="facet facet-side facet-rear-right" />
+  </ns0:g>
+</ns0:svg>

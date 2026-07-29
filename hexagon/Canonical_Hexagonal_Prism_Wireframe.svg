@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="470" height="507" viewBox="0 0 470 507">
+
+<style>
+.visible{
+  fill:none;
+  stroke:#111;
+  stroke-width:4;
+  stroke-linejoin:round;
+  stroke-linecap:round;
+}
+.hidden{
+  fill:none;
+  stroke:#111;
+  stroke-width:4;
+  stroke-linejoin:round;
+  stroke-linecap:round;
+  stroke-dasharray:16 12;
+}
+</style>
+
+<!-- Top hexagon -->
+<polyline class="visible"
+ points="74,115 155,49 315,49 390,115"/>
+
+<polyline class="visible"
+ points="74,115 154,181 315,181 390,115"/>
+
+<!-- Visible vertical edges -->
+<line class="visible" x1="74"  y1="115" x2="74"  y2="416"/>
+<line class="visible" x1="154" y1="181" x2="154" y2="450"/>
+<line class="visible" x1="315" y1="181" x2="315" y2="450"/>
+<line class="visible" x1="390" y1="115" x2="390" y2="416"/>
+
+<!-- Bottom visible edges -->
+<polyline class="visible"
+ points="74,416 154,450 315,450 390,416"/>
+
+<!-- Hidden rear verticals -->
+<line class="hidden" x1="195" y1="49"  x2="195" y2="315"/>
+<line class="hidden" x1="275" y1="49"  x2="275" y2="315"/>
+
+<!-- Hidden bottom edges -->
+<polyline class="hidden"
+ points="114,382 195,315 275,315 355,382"/>
+
+</svg>

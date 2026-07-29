@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320">
+<style>
+svg{background:#f7f7f7}
+
+/* Geometry */
+.face{
+  stroke:#5c5c5c;
+  stroke-width:1.2;
+  stroke-linejoin:round;
+}
+
+/* Base material */
+.top{fill:url(#top);}
+.front{fill:url(#front);}
+.right{fill:url(#right);}
+
+/* Experiment 001: one optical sheet */
+.optical-sheet{
+  mix-blend-mode:screen;
+  opacity:.22;
+}
+
+.edge{
+  stroke:white;
+  stroke-width:1.6;
+  opacity:.12;
+}
+</style>
+
+<defs>
+<linearGradient id="top" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#f2f2f2"/>
+  <stop offset="100%" stop-color="#d6d6d6"/>
+</linearGradient>
+
+<linearGradient id="front" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#e3e3e3"/>
+  <stop offset="100%" stop-color="#a9a9a9"/>
+</linearGradient>
+
+<linearGradient id="right" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#d0d0d0"/>
+  <stop offset="100%" stop-color="#949494"/>
+</linearGradient>
+
+<!-- Oversized elliptical optical field -->
+<radialGradient id="adularescence"
+                cx="35%" cy="32%" r="95%">
+  <stop offset="0%" stop-color="#eef8ff" stop-opacity=".95"/>
+  <stop offset="30%" stop-color="#d7e8f8" stop-opacity=".40"/>
+  <stop offset="65%" stop-color="#ffffff" stop-opacity=".08"/>
+  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+</defs>
+
+<polygon class="face top"
+ points="120,60 220,60 270,95 220,130 120,130 70,95"/>
+
+<polygon class="face front"
+ points="120,130 220,130 220,245 120,245"/>
+
+<polygon class="face right"
+ points="220,130 270,95 270,210 220,245"/>
+
+<!-- Single optical sheet -->
+<polygon class="optical-sheet"
+ fill="url(#adularescence)"
+ points="120,130 220,130 220,245 120,245"/>
+
+<line class="edge" x1="120" y1="130" x2="220" y2="130"/>
+<line class="edge" x1="220" y1="130" x2="270" y2="95"/>
+
+</svg>

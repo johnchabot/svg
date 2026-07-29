@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
+<defs>
+<pattern id="checker" width="48" height="48" patternUnits="userSpaceOnUse">
+<rect width="48" height="48" fill="#dadada"/><rect width="24" height="24" fill="#efefef"/><rect x="24" y="24" width="24" height="24" fill="#efefef"/>
+</pattern>
+<linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#fff" stop-opacity=".26"/>
+<stop offset="100%" stop-color="#dce7f2" stop-opacity=".10"/>
+</linearGradient>
+</defs>
+<rect width="520" height="360" fill="url(#checker)"/>
+
+<!-- hidden geometry from SAME prism -->
+<g stroke="#7b838b" stroke-opacity=".28" fill="none" stroke-width="1">
+<polygon points="180.25,130.75 215.25,164.09 285.25,164.09 320.25,130.75 285.25,97.41 215.25,97.41"/>
+<line x1="150.0" y1="150.0" x2="180.25" y2="130.75"/>
+<line x1="185.0" y1="183.34" x2="215.25" y2="164.09"/>
+<line x1="255.0" y1="183.34" x2="285.25" y2="164.09"/>
+<line x1="290.0" y1="150.0" x2="320.25" y2="130.75"/>
+<line x1="255.0" y1="116.66" x2="285.25" y2="97.41"/>
+<line x1="185.0" y1="116.66" x2="215.25" y2="97.41"/>
+</g>
+<polygon fill="url(#glass)" stroke="#4f5660" stroke-width="1.2" points="150.0,150.0 185.0,183.34 255.0,183.34 290.0,150.0 255.0,116.66 185.0,116.66"/>
+<polygon fill="url(#glass)" stroke="#4f5660" stroke-width="1.2" points="150.0,150.0 185.0,183.34 215.25,164.09 180.25,130.75"/>
+<polygon fill="url(#glass)" stroke="#4f5660" stroke-width="1.2" points="185.0,116.66 150.0,150.0 180.25,130.75 215.25,97.41"/>
+<polygon fill="url(#glass)" stroke="#4f5660" stroke-width="1.2" points="290.0,150.0 255.0,116.66 285.25,97.41 320.25,130.75"/>
+</svg>

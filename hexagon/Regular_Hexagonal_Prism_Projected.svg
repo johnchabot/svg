@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="500" height="420">
+<style>
+.v{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.h{fill:none;stroke:#111;stroke-width:3;stroke-dasharray:10 8;stroke-linecap:round}
+</style>
+
+<!-- visible top -->
+<polygon class="v" points="150.0,95.0 185.0,130.2 255.0,130.2 290.0,95.0 255.0,59.8 185.0,59.8"/>
+
+<!-- visible verticals -->
+<line class="v" x1="150.0" y1="95.0" x2="150.0" y2="265.0"/>
+<line class="v" x1="185.0" y1="130.2" x2="185.0" y2="300.2"/>
+<line class="v" x1="255.0" y1="59.8" x2="255.0" y2="229.8"/>
+<line class="v" x1="185.0" y1="59.8" x2="185.0" y2="229.8"/>
+
+<!-- visible bottom front -->
+<polyline class="v" points="185.0,229.8 150.0,265.0 185.0,300.2 255.0,300.2"/>
+
+<!-- hidden rear top -->
+<polyline class="h" points="297.0,102.2 332.0,67.0 297.0,31.8"/>
+
+<!-- hidden rear verticals -->
+<line class="h" x1="332.0" y1="67.0" x2="332.0" y2="237.0"/>
+<line class="h" x1="297.0" y1="102.2" x2="297.0" y2="272.2"/>
+
+<!-- hidden rear bottom -->
+<polyline class="h" points="297.0,272.2 332.0,237.0 297.0,201.8"/>
+</svg>

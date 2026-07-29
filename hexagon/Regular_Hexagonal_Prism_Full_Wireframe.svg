@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="520" height="430"
+     viewBox="0 0 520 430">
+
+<style>
+.visible {
+  fill:none;
+  stroke:#111;
+  stroke-width:2.5;
+  stroke-linejoin:round;
+  stroke-linecap:round;
+}
+.hidden {
+  fill:none;
+  stroke:#8a8a8a;
+  stroke-width:2;
+  stroke-dasharray:7 6;
+  stroke-linejoin:round;
+  stroke-linecap:round;
+}
+</style>
+
+<!-- Rear hexagon -->
+<polygon class="hidden" points="202.00,55.00 237.00,90.16 307.00,90.16 342.00,55.00 307.00,19.84 237.00,19.84"/>
+<polygon class="hidden" points="202.00,235.00 237.00,270.16 307.00,270.16 342.00,235.00 307.00,199.84 237.00,199.84"/>
+
+<!-- Rear verticals -->
+<line class="hidden" x1="202.00" y1="55.00" x2="202.00" y2="235.00"/>
+<line class="hidden" x1="237.00" y1="90.16" x2="237.00" y2="270.16"/>
+<line class="hidden" x1="307.00" y1="90.16" x2="307.00" y2="270.16"/>
+<line class="hidden" x1="342.00" y1="55.00" x2="342.00" y2="235.00"/>
+<line class="hidden" x1="307.00" y1="19.84" x2="307.00" y2="199.84"/>
+<line class="hidden" x1="237.00" y1="19.84" x2="237.00" y2="199.84"/>
+
+<!-- Connectors -->
+<line class="hidden" x1="160.00" y1="85.00" x2="202.00" y2="55.00"/>
+<line class="hidden" x1="195.00" y1="120.16" x2="237.00" y2="90.16"/>
+<line class="hidden" x1="265.00" y1="120.16" x2="307.00" y2="90.16"/>
+<line class="hidden" x1="300.00" y1="85.00" x2="342.00" y2="55.00"/>
+<line class="hidden" x1="265.00" y1="49.84" x2="307.00" y2="19.84"/>
+<line class="hidden" x1="195.00" y1="49.84" x2="237.00" y2="19.84"/>
+<line class="hidden" x1="160.00" y1="265.00" x2="202.00" y2="235.00"/>
+<line class="hidden" x1="195.00" y1="300.16" x2="237.00" y2="270.16"/>
+<line class="hidden" x1="265.00" y1="300.16" x2="307.00" y2="270.16"/>
+<line class="hidden" x1="300.00" y1="265.00" x2="342.00" y2="235.00"/>
+<line class="hidden" x1="265.00" y1="229.84" x2="307.00" y2="199.84"/>
+<line class="hidden" x1="195.00" y1="229.84" x2="237.00" y2="199.84"/>
+
+<!-- Front hexagon -->
+<polygon class="visible" points="160.00,85.00 195.00,120.16 265.00,120.16 300.00,85.00 265.00,49.84 195.00,49.84"/>
+<polygon class="visible" points="160.00,265.00 195.00,300.16 265.00,300.16 300.00,265.00 265.00,229.84 195.00,229.84"/>
+<line class="visible" x1="160.00" y1="85.00" x2="160.00" y2="265.00"/>
+<line class="visible" x1="195.00" y1="120.16" x2="195.00" y2="300.16"/>
+<line class="visible" x1="265.00" y1="120.16" x2="265.00" y2="300.16"/>
+<line class="visible" x1="300.00" y1="85.00" x2="300.00" y2="265.00"/>
+<line class="visible" x1="265.00" y1="49.84" x2="265.00" y2="229.84"/>
+<line class="visible" x1="195.00" y1="49.84" x2="195.00" y2="229.84"/>
+</svg>

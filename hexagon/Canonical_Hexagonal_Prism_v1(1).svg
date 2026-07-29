@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Hexagonal_Prism" width="385" height="315">
+  <style>
+.facet{stroke:#000;stroke-width:1;}
+</style>
+  <g id="top">
+    <ns0:polygon fill="#444" opacity="0.75" points="  4,  58  126,   6  142, 156   28, 220" class="facet facet-top" />
+  </g>
+  <g id="side-front-left">
+    <ns0:polygon fill="#666" opacity="0.75" points="126,   6  292,   4  298, 156  142, 156" class="facet facet-side facet-front-left" />
+  </g>
+  <g id="side-front">
+    <ns0:polygon fill="#AAA" opacity="0.75" points="292,   4  378,  52  378, 224  298, 156" class="facet facet-side facet-front" />
+  </g>
+  <g id="side-front-right">
+    <ns0:polygon fill="#888" opacity="0.75" points=" 28, 220  142, 156  298, 156  378, 224  274, 310   74, 306  " class="facet facet-side facet-front-right" />
+  </g>
+  <g id="bottom">
+    <ns0:polygon fill="#483" opacity="0.75" points="  4,  58   50, 122   74, 306   28, 220" class="facet facet-bottom" />
+  </g>
+  <g id="side-rear-left">
+    <ns0:polygon fill="#362" opacity="0.75" points=" 50, 122  264, 122  274, 310   74, 306" class="facet facet-side facet-rear-left" />
+  </g>
+  <g id="side-rear">
+    <ns0:polygon fill="#241" opacity="0.75" points="264, 122  378,  52  378, 224  274, 310" class="facet facet-side facet-rear" />
+  </g>
+  <g id="side-rear-right">
+    <ns0:polygon fill="#5A4" opacity="0.75" points="  4,  58  126,   6  292,   4  378,  52  264, 122   50, 122" class="facet facet-side facet-rear-right" />
+  </g>
+</ns0:svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="470" height="507" viewBox="0 0 470 507">
+
+<style>
+.visible{
+  fill:none;
+  stroke:#111;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.hidden{
+  fill:none;
+  stroke:#111;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:14 10;
+}
+</style>
+
+<!-- Visible outline -->
+<polyline class="visible" points="70,115 155,50 315,50 400,115"/>
+<polyline class="visible" points="70,115 155,180 315,180 400,115"/>
+
+<line class="visible" x1="70"  y1="115" x2="70"  y2="418"/>
+<line class="visible" x1="155" y1="180" x2="155" y2="450"/>
+<line class="visible" x1="315" y1="180" x2="315" y2="450"/>
+<line class="visible" x1="400" y1="115" x2="400" y2="418"/>
+
+<polyline class="visible" points="70,418 155,450 315,450 400,418"/>
+
+<!-- Hidden edges of SAME prism -->
+<line class="hidden" x1="195" y1="50" x2="195" y2="320"/>
+<line class="hidden" x1="275" y1="50" x2="275" y2="320"/>
+
+<line class="hidden" x1="195" y1="320" x2="275" y2="320"/>
+
+<!-- Hidden bottom diagonals connect to visible vertices -->
+<line class="hidden" x1="70"  y1="418" x2="195" y2="320"/>
+<line class="hidden" x1="275" y1="320" x2="400" y2="418"/>
+
+</svg>
