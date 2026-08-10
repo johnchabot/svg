@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flora-registry grid-type="monospaced-hex" max-facets="6">
+
+  <!-- ================================================================= -->
+  <!-- EXAMPLE 1: FRACTAL BARNSLEY FERN (Reference Axis Matrix)          -->
+  <!-- ================================================================= -->
+  <plant id="barnsley-fern-reference" genus="Asplenium" species="scolopendrium">
+    <seed-metrics>
+      <stat name="longest-internode-height" value="200" unit="mm"/>
+      <stat name="facet-rotation-step" value="1"/>
+    </seed-metrics>
+
+    <fractal-definition method="IFS-chaotic-game">
+      <transformation id="f1-stem" p="0.01">
+        <matrix a="0.00" b="0.00" c="0.00" d="0.16" e="0.00" f="0.00"/>
+      </transformation>
+      <transformation id="f2-axial-reduction" p="0.85">
+        <matrix a="0.85" b="0.04" c="-0.04" d="0.85" e="0.00" f="1.60"/>
+      </transformation>
+      <transformation id="f3-left-leaflet" p="0.07">
+        <matrix a="0.20" b="-0.26" c="0.23" d="0.22" e="0.00" f="1.60"/>
+      </transformation>
+      <transformation id="f4-right-leaflet" p="0.07">
+        <matrix a="-0.15" b="0.28" c="0.26" d="0.24" e="0.00" f="0.44"/>
+      </transformation>
+    </fractal-definition>
+
+    <axis id="main-stem" order="0">
+      <internode id="f-internode-1" current-height="200" facet-alignment="1">
+        <node id="f-node-1" height-offset="200">
+          <leaf id="fern-frond" type="ifs-procedural" fractal-ref="barnsley-fern-reference" facet-index="1"/>
+        </node>
+      </internode>
+    </axis>
+  </plant>
+
+  <!-- ================================================================= -->
+  <!-- EXAMPLE 2: PELARGONIUM (Concentric Gradients & Flower Whorls)    -->
+  <!-- ================================================================= -->
+  <plant id="pelargonium-specimen" genus="Pelargonium" species="zonale">
+    <seed-metrics>
+      <stat name="longest-internode-height" value="150" unit="mm"/>
+      <stat name="longest-petiole-length" value="75" unit="mm"/>
+      <stat name="longest-peduncle-length" value="180" unit="mm"/>
+      <stat name="longest-pedicel-length" value="25" unit="mm"/>
+      <stat name="seed-petal-count" value="5"/>
+      <stat name="seed-stamen-count" value="7"/>
+      <stat name="seed-sepal-count" value="5"/>
+      <stat name="max-pistil-height" value="12" unit="mm"/>
+
+      <generation-rules>
+        <rule target="inflorescence-umbel">
+          <formula type="linear-density" variable="flower-count"/>
+          <param name="spacing-interval" value="12" unit="mm"/>
+          <param name="min-count" value="3"/>
+          <param name="max-count" value="24"/>
+        </rule>
+        <rule target="leaf-blade">
+          <formula type="allometric-ratio" variable="blade-to-petiole"/>
+          <param name="proportional-scale-factor" value="1.06"/>
+          <todo id="TODO-01-KOCH-LEAF" status="pending" priority="high">
+            <framework type="IFS-recursive-boundary"/>
+            <base-area-multiplier value="1.60" formula="8/5 * A_0"/>
+            <iteration-depth-limit value="4"/>
+          </todo>
+        </rule>
+        <rule target="facet-orientation-shifts">
+          <formula type="modulo-6-helix"/>
+          <param name="axial-step" value="2"/>
+          <param name="divergence-offset" value="0"/>
+          <param name="inflorescence-offset" value="4"/>
+        </rule>
+      </generation-rules>
+
+      <color-palette>
+        <color-seed name="axial-skeleton-color" value="#77A063"/> 
+        <color-seed name="petal-color" value="#E6007E"/>
+        <color-seed name="pollen-anther-color" value="#FFC107"/>
+        <color-seed name="stigma-receptive-color" value="#C2185B"/>
+        <radial-gradient id="geranium-leaf-zone" mapping="innermost-to-outer">
+          <stop offset="0%"   color="#4D7C33"/>
+          <stop offset="55%"  color="#253F18"/>
+          <stop offset="100%" color="#72AA54"/>
+        </radial-gradient>
+      </color-palette>
+    </seed-metrics>
+
+    <axis id="main-stem" order="0">
+      <internode id="p-internode-1" current-height="150" facet-alignment="1">
+        <node id="p-node-1" height-offset="150">
+          <leaf id="p-leaf-1" facet-index="1">
+            <petiole length="75" angle="60" color-ref="axial-skeleton-color"/>
+            <blade type="reniform" width="80" length="79.5" gradient-ref="geranium-leaf-zone"/>
+          </leaf>
+        </node>
+
+        <internode id="p-internode-2" current-height="127" facet-alignment="3">
+          <node id="p-node-2" height-offset="127">
+            <inflorescence id="p-umbel" type="umbel" facet-index="1">
+              <peduncle length="180" angle="0" color-ref="axial-skeleton-color"/>
+              <cluster-head type="radiating-hub" generated-count="15">
+                
+                <flower-unit id="p-flower-bud-1" facet-index="1" state="bud">
+                  <pedicel length="15" angle="15" color-ref="axial-skeleton-color"/>
+                  <bud maturity-percentage="35">
+                    <enclosing-calyx sepal-count="5" fusion="free" color-ref="axial-skeleton-color"/>
+                    <dimensions diameter="6" length="10"/>
+                  </bud>
+                </flower-unit>
+
+                <flower-unit id="p-flower-mature-2" facet-index="2" state="anthesis">
+                  <pedicel length="25" angle="45" color-ref="axial-skeleton-color"/>
+                  <receptacle radius="4" position-z="0">
+                    <calyx structural-order="1">
+                      <sepal id="p-sep-1" facet-index="1" length="8" color-ref="axial-skeleton-color"/>
+                      <sepal id="p-sep-2" facet-index="3" length="8" color-ref="axial-skeleton-color"/>
+                    </calyx>
+                    <corolla structural-order="2">
+                      <petal id="p-pet-1" facet-index="1" length="18" width="12" color-ref="petal-color"/>
+                      <petal id="p-pet-2" facet-index="2" length="18" width="12" color-ref="petal-color"/>
+                    </corolla>
+                    <androecium structural-order="3">
+                      <stamen id="p-stamen-1" facet-index="1">
+                        <filament length="8" thickness="0.4" color-ref="axial-skeleton-color"/>
+                        <anther type="dithecal" state="dehiscent" color-ref="pollen-anther-color"/>
+                      </stamen>
+                    </androecium>
+                    <gynoecium structural-order="4" position="center">
+                      <pistil id="main-pistil">
+                        <ovary type="superior" carpel-count="5" width="3" height="4" color-ref="axial-skeleton-color"/>
+                        <style length="7" thickness="0.6" color-ref="axial-skeleton-color"/>
+                        <stigma lobed-count="5" state="receptive" color-ref="stigma-receptive-color"/>
+                      </pistil>
+                    </gynoecium>
+                  </receptacle>
+                </flower-unit>
+
+              </cluster-head>
+            </inflorescence>
+          </node>
+        </internode>
+      </internode>
+    </axis>
+  </plant>
+
+  <!-- ================================================================= -->
+  <!-- EXAMPLE 3: MIMOSA PUDICA (High-Density Bipinnate Layout)          -->
+  <!-- ================================================================= -->
+  <plant id="mimosa-specimen" genus="Mimosa" species="pudica">
+    <seed-metrics>
+      <stat name="longest-internode-height" value="90" unit="mm"/>
+      <stat name="longest-petiole-length" value="40" unit="mm"/>
+      <stat name="longest-rachis-length" value="60" unit="mm"/>
+
+      <generation-rules>
+        <rule target="compound-leaf-pinna">
+          <formula type="linear-density" variable="leaflet-pair-count"/>
+          <param name="spacing-interval" value="2.5" unit="mm"/>
+          <param name="min-count" value="4"/>
+          <param name="max-count" value="24"/>
+        </rule>
+        <rule target="rachis-cluster">
+          <formula type="fixed-allometric-count" variable="pinna-axes"/>
+          <param name="base-count" value="4"/>
+        </rule>
+        <rule target="facet-orientation-shifts">
+          <formula type="modulo-6-helix"/>
+          <param name="axial-step" value="1"/>
+          <param name="divergence-offset" value="3"/>
+        </rule>
+      </generation-rules>
+    </seed-metrics>
+
+    <fractal-definition method="IFS-deterministic-grid">
+      <transformation id="f1-rachis-spine" p="0.02">
+        <matrix a="0.00" b="0.00" c="0.00" d="0.25" e="0.00" f="0.00"/>
+      </transformation>
+      <transformation id="f2-rachis-reduction" p="0.78">
+        <matrix a="0.90" b="0.02" c="-0.02" d="0.90" e="0.00" f="1.10"/>
+      </transformation>
+      <transformation id="f3-left-pinnule" p="0.10">
+        <matrix a="0.12" b="-0.15" c="0.18" d="0.15" e="-0.05" f="0.20"/>
+      </transformation>
+      <transformation id="f4-right-pinnule" p="0.10">
+        <matrix a="-0.10" b="0.15" c="0.18" d="0.15" e="0.05" f="0.15"/>
+      </transformation>
+    </fractal-definition>
+
+    <axis id="main-stem" order="0">
+      <internode id="m-internode-1" current-height="90" facet-alignment="2">
+        <node id="m-node-1" height-offset="90">
+          <leaf id="m-leaf-1" type="bipinnate" facet-index="5">
+            <petiole length="40" angle="45"/>
+            <rachis-cluster type="digitate" axes-count="4">
+              <pinna id="m-pinna-1" length="60" facet-index="1">
+                <leaflet-array source-fractal="mimosa-specimen" density-points="5000"/>
+              </pinna>
+            </rachis-cluster>
+          </leaf>
+        </node>
+      </internode>
+    </axis>
+  </plant>
+
+</flora-registry>
