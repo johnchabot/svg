@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flora-registry grid-type="monospaced-hex" max-facets="6">
+
+  <!-- ================================================================= -->
+  <!-- EXAMPLE 1: FRACTAL BARNSLEY FERN (Standard Reference Matrix)       -->
+  <!-- ================================================================= -->
+  <plant id="barnsley-fern-reference" genus="Asplenium" species="scolopendrium">
+    <seed-metrics>
+      <stat name="longest-internode-height" value="200" unit="mm"/>
+      <stat name="facet-rotation-step" value="1"/>
+    </seed-metrics>
+
+    <!-- 
+      FRACTAL ENGINE MATRIX EQUATIONS:
+      x_new = a*x + b*y + e
+      y_new = c*x + d*y + f
+      
+      The system executes iteratively by evaluating a random point 
+      against one of the four functions below based on probability 'p'.
+    -->
+    <fractal-definition method="IFS-chaotic-game">
+      <!-- f1: Stem generation (Maps the point to the central vertical axis) -->
+      <transformation id="f1-stem" p="0.01">
+        <matrix a="0.00" b="0.00" c="0.00" d="0.16" e="0.00" f="0.00"/>
+      </transformation>
+      
+      <!-- f2: Successively smaller leaflets (Scales and rotates the pattern up the spine) -->
+      <transformation id="f2-axial-reduction" p="0.85">
+        <matrix a="0.85" b="0.04" c="-0.04" d="0.85" e="0.00" f="1.60"/>
+      </transformation>
+      
+      <!-- f3: Largest left-hand leaflet (Creates side pinnae branching left) -->
+      <transformation id="f3-left-leaflet" p="0.07">
+        <matrix a="0.20" b="-0.26" c="0.23" d="0.22" e="0.00" f="1.60"/>
+      </transformation>
+      
+      <!-- f4: Largest right-hand leaflet (Creates side pinnae branching right) -->
+      <transformation id="f4-right-leaflet" p="0.07">
+        <matrix a="-0.15" b="0.28" c="0.26" d="0.24" e="0.00" f="0.44"/>
+      </transformation>
+    </fractal-definition>
+
+    <axis id="main-stem" order="0">
+      <internode id="f-internode-1" current-height="200" facet-alignment="1">
+        <node id="f-node-1" height-offset="200">
+          <!-- The rendering engine applies the fractal definition to draw this blade -->
+          <leaf id="fern-frond" type="ifs-procedural" fractal-ref="barnsley-fern-reference"/>
+        </node>
+      </internode>
+    </axis>
+  </plant>
+
+  <!-- ================================================================= -->
+  <!-- EXAMPLE 2: MIMOSA PUDICA (Modified Matrix for Sensitive Leaflets)-->
+  <!-- ================================================================= -->
+  <plant id="mimosa-specimen" genus="Mimosa" species="pudica">
+    <seed-metrics>
+      <stat name="longest-internode-height" value="90" unit="mm"/>
+      <stat name="longest-petiole-length" value="40" unit="mm"/>
+      <stat name="longest-rachis-length" value="60" unit="mm"/>
+    </seed-metrics>
+
+    <!-- 
+      MIMOSA COMPOUND BIPINNATE TRANSFORMS:
+      Custom constants tuned specifically for Mimosa's straight rachis, 
+      narrower leaflet distribution, and tight alternate-symmetrical layout.
+    -->
+    <fractal-definition method="IFS-deterministic-grid">
+      <!-- f1: Central Rachis Axis (Tuned to draw a ultra-thin midrib line) -->
+      <transformation id="f1-rachis-spine" p="0.02">
+        <matrix a="0.00" b="0.00" c="0.00" d="0.25" e="0.00" f="0.00"/>
+      </transformation>
+
+      <!-- f2: Successively smaller leaflet tiers up the spine (Dense stacking) -->
+      <transformation id="f2-rachis-reduction" p="0.78">
+        <matrix a="0.90" b="0.02" c="-0.02" d="0.90" e="0.00" f="1.10"/>
+      </transformation>
+
+      <!-- f3: Left-side pinnule pairs (Narrow launch angle, shorter length) -->
+      <transformation id="f3-left-pinnule" p="0.10">
+        <matrix a="0.12" b="-0.15" c="0.18" d="0.15" e="-0.05" f="0.20"/>
+      </transformation>
+
+      <!-- f4: Right-side pinnule pairs (Balanced offset, narrow width) -->
+      <transformation id="f4-right-pinnule" p="0.10">
+        <matrix a="-0.10" b="0.15" c="0.18" d="0.15" e="0.05" f="0.15"/>
+      </transformation>
+    </fractal-definition>
+
+    <axis id="main-stem" order="0">
+      <internode id="m-internode-1" current-height="90" facet-alignment="2">
+        <node id="m-node-1" height-offset="90">
+          <leaf id="m-leaf-1" type="bipinnate" facet-index="2">
+            <petiole length="40" angle="45"/>
+            <rachis-cluster type="digitate">
+              <pinna id="m-pinna-1" length="60" facet-index="1">
+                <!-- 
+                  The renderer hits this pinna, reads the fractal-definition constants above, 
+                  and populates the individual leaflet vertices programmatically 
+                  instead of parsing individual nested tags.
+                -->
+                <leaflet-array source-fractal="mimosa-specimen" density-points="5000"/>
+              </pinna>
+            </rachis-cluster>
+          </leaf>
+        </node>
+      </internode>
+    </axis>
+  </plant>
+
+</flora-registry>
