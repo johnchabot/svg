@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://w3.org">
+
+  <xs:attribute name="facet-range">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1"/>
+        <xs:maxInclusive value="6"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+  <xs:element name="flora-registry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="plant" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="seed-metrics" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="fractal-definition" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="axis" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="genus" type="xs:string" use="required"/>
+            <xs:attribute name="species" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="grid-type" type="xs:string" fixed="monospaced-hex"/>
+      <xs:attribute name="max-facets" type="xs:integer" fixed="6"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
